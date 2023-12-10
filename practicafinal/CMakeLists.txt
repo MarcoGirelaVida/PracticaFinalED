@@ -24,10 +24,10 @@ add_library(imagen ${BASE_FOLDER}/src/imagen.cpp ${BASE_FOLDER}/src/imagenES.cpp
 
 # Genera el ejecutable de X.cpp (si es que este fichero existe)
 # E indica que depende de la libreria image
-#if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pruebarotacion.cpp)
-#    add_executable(pruebarotacion ${BASE_FOLDER}/src/pruebarotacion.cpp)
-#    target_link_libraries(pruebarotacion LINK_PUBLIC image)
-#endif()
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pruebarotacion.cpp)
+    add_executable(pruebarotacion ${BASE_FOLDER}/src/pruebarotacion.cpp)
+    target_link_libraries(pruebarotacion LINK_PUBLIC imagen)
+endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pruebapegado.cpp)
     add_executable(pruebapegado ${BASE_FOLDER}/src/pruebapegado.cpp)
