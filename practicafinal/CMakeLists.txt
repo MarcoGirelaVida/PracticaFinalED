@@ -20,7 +20,7 @@ include_directories(${BASE_FOLDER}/include)
 
 # Genera librería imagen a partir de imagen.cpp e imagenES.cpp
 # CAMBIO EN EL DIRECTORIO DE LOS FUENTES
-add_library(image ${BASE_FOLDER}/src/libimage_src/image.cpp ${BASE_FOLDER}/src/libimage_src/imageop.cpp ${BASE_FOLDER}/src/libimage_src/imageIO.cpp)
+add_library(imagen ${BASE_FOLDER}/src/libimagen_src/imagen.cpp ${BASE_FOLDER}/src/libimagen_src/imagenES.cpp)
 
 # Genera el ejecutable de X.cpp (si es que este fichero existe)
 # E indica que depende de la libreria image
@@ -31,12 +31,12 @@ add_library(image ${BASE_FOLDER}/src/libimage_src/image.cpp ${BASE_FOLDER}/src/l
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pruebapegado.cpp)
     add_executable(pruebapegado ${BASE_FOLDER}/src/pruebapegado.cpp)
-    target_link_libraries(pruebapegado LINK_PUBLIC image)
+    target_link_libraries(pruebapegado LINK_PUBLIC imagen)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/ruta_aerea.cpp)
     add_executable(ruta_aerea ${BASE_FOLDER}/src/ruta_aerea.cpp)
-    target_link_libraries(ruta_aerea LINK_PUBLIC image)
+    target_link_libraries(ruta_aerea LINK_PUBLIC imagen)
 endif()
 
 # check if Doxygen is installed
