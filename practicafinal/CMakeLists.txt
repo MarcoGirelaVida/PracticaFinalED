@@ -20,7 +20,7 @@ include_directories(${BASE_FOLDER}/include)
 
 # Genera librería imagen a partir de imagen.cpp e imagenES.cpp
 # CAMBIO EN EL DIRECTORIO DE LOS FUENTES
-add_library(imagen ${BASE_FOLDER}/src/libimagen_src/imagen.cpp ${BASE_FOLDER}/src/libimagen_src/imagenES.cpp)
+add_library(imagen ${BASE_FOLDER}/src/imagen.cpp ${BASE_FOLDER}/src/imagenES.cpp)
 
 # Genera el ejecutable de X.cpp (si es que este fichero existe)
 # E indica que depende de la libreria image
