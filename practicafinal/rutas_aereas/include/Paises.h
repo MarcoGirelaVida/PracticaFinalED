@@ -7,6 +7,9 @@
 #include <unordered_map>
 using namespace std;
 
+#ifndef PAISES
+#define PAISES
+
 
 /**
  * @brief T.D.A Paises
@@ -136,3 +139,6 @@ class Paises{
 	friend istream & operator>>(istream & is, Paises & R);
 	friend ostream & operator<<(ostream & os, const Paises &R);
 };
+
+
+#endif

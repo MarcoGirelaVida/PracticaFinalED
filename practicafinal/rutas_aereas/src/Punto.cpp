@@ -21,6 +21,7 @@ void Punto::SetLongitud(double l){
     longitud = l;
 }
 
+
 bool Punto::operator<(const Punto &p)const{
 
     if (GetLatitud() < p.GetLatitud()) {
