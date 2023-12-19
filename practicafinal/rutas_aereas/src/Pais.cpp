@@ -34,7 +34,7 @@ class Pais{
 	
 	    is>>lat>>lng>>P.pais>>P.bandera;
 	
-	    P.p=Punto(lat,lng,"");
+	    P.p=Punto(lat,lng);
 	    return is;
     }
 
