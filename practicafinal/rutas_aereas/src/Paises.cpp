@@ -1,7 +1,7 @@
 
 #include "Pais.h"
 #include "Paises.h"
-#include <set>
+#include <unordered_set>
 #include <vector>
 using namespace std;
 
@@ -9,10 +9,10 @@ using namespace std;
 Paises::Paises(){}
 
 void Paises::Insertar(const Pais &P){
-    datos.insert(P);
+    datos.emplace(make_pair(P.GetPunto().GetLatitud(),P.GetPunto().GetLongitud()),P);
 }
 void Paises::Borrar(const Pais &P){
-    datos.erase(P);
+    datos.erase(make_pair(P.GetPunto().GetLatitud(),P.GetPunto().GetLongitud()));
 }
 
 
@@ -40,18 +40,15 @@ Paises::const_iterator Paises::end()const{
 }
 
 Paises::iterator Paises::find(const Pais &p){
-    iterator it;
-    set<Pais>::iterator i;
-    for (i=datos.begin(); i!=datos.end() && !((*i)==p);++i);
-        it.p=i;
+    iterator it = find(p.GetPunto());
     return it;
 }
 
 Paises::iterator Paises::find(const Punto &p){
     
     iterator it;
-    set<Pais>::iterator i;
-    for (i=datos.begin(); i!=datos.end() && !((*i).GetPunto() == p); ++i);
+    unordered_map<pair<double,double>,Pais>::iterator i;
+    for (i=datos.begin(); i!=datos.end() && !(i->first.first == p.GetLatitud() && i->first.second == p.GetLongitud()); ++i);
         it.p=i;
     return it;
 }

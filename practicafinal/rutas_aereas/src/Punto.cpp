@@ -40,9 +40,12 @@ bool Punto::operator==(const Punto &p)const{
 }
 
 istream & operator>>(istream & is, Punto &p){
-    is >> p.latitud >> p.longitud;
+    char par1, coma, par2;
+    is >> par1 >> p.latitud >> coma >> p.longitud >> par2;
+    return is;
 }
 
 ostream & operator<<(ostream & os, const Punto &p){
-    os << p.GetLatitud() << p.GetLongitud() << endl;
+    os << "(" << p.GetLatitud() << "," << p.GetLongitud() << ")";
+    return os;
 }
