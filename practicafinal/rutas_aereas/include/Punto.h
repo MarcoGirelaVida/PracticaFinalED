@@ -8,6 +8,10 @@
 using namespace std;
 
 
+#ifndef PUNTO 
+#define PUNTO
+
+
 /**
  * @brief T.D.A. Punto
  * 
@@ -96,6 +100,7 @@ class Punto{
 
         void SetLongitud(double l);
 
+
         /**
          * @brief Sobrecarga del operador <
          * @param p Punto que se va a comparar con el que llama a la operación
@@ -139,3 +144,5 @@ class Punto{
          */
         friend ostream & operator<<(ostream & os, const Punto &p);
 };
+
+#endif

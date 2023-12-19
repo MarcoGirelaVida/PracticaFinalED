@@ -1,0 +1,22 @@
+PROJECT_NAME           = "Práctica Final: Rutas Aereas"
+PROJECT_BRIEF          = "Tipos de datos abstractos: Imágenes"
+PROJECT_LOGO           = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/images/ed.png
+HTML_HEADER            = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/header.html
+
+OUTPUT_DIRECTORY       = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/doc_doxygen/
+INPUT                  = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/src /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/images
+EXTRACT_PRIVATE        = NO
+
+# Doxygen Awesome CSS needed options
+GENERATE_TREEVIEW      = YES # optional. Also works without treeview
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+HTML_EXTRA_STYLESHEET  = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/doxygen-awesome.css \
+                        /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/doxygen-awesome-sidebar-only.css \
+                        /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css
+HTML_COLORSTYLE        = LIGHT # required with Doxygen >= 1.9.5
+HTML_EXTRA_FILES       = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
+                        /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
+                        /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/doc/doxygen-awesome-css/doxygen-awesome-interactive-toc.js

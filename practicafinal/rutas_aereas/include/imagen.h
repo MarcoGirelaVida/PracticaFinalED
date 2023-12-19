@@ -43,6 +43,7 @@ class Imagen{
    int num_cols()const{return nc;}
    void PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado=OPACO);
    Imagen ExtraeImagen(int posi,int posj,int dimi,int dimj);
+   void Rota(const Imagen & Io,double angulo);
 };   
 
 
