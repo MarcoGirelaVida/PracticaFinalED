@@ -4,6 +4,9 @@
  */
 #include "Punto.h"
 
+#ifndef PAIS
+#define PAIS
+
 /**
  * @brief T.D.A Pais
  * 
@@ -136,3 +139,6 @@ class Pais{
     friend ostream & operator<<(ostream & os, const Pais &P);
 
 };
+
+
+#endif

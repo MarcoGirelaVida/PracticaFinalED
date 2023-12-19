@@ -2,6 +2,10 @@
 #include <unordered_map>
 #include <iostream>
 #include "Ruta.h"
+#include "imagen.h"
+
+#ifndef ALMACEN_RUTAS
+#define ALMACEN_RUTAS
 
 class Almacen_Rutas{
 
@@ -13,6 +17,9 @@ class Almacen_Rutas{
         void Insertar(const Ruta & R);
         void Borrar(const Ruta & R);
         Ruta GetRuta(const string & a);
+        Imagen PintarRuta(const Imagen & mapa, const Ruta & R);
+
+
 
         class iterator{
             private:
@@ -63,3 +70,5 @@ class Almacen_Rutas{
 
 
 };
+
+#endif

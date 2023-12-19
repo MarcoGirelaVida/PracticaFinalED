@@ -28,6 +28,7 @@ Ruta Almacen_Rutas::GetRuta(const string & a){
     return it->second;
 }
 
+
 Almacen_Rutas::iterator Almacen_Rutas::begin(){
     iterator it;
     it.p = rutas.begin();

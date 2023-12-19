@@ -2,6 +2,12 @@
 #include <list>
 #include <iostream>
 #include "Punto.h"
+#include "imagen.h"
+#include "Paises.h"
+
+
+#ifndef RUTA
+#define RUTA
 
 using namespace std;
 
@@ -15,6 +21,8 @@ class Ruta{
         void Insertar (const Punto & n);
         void Borrar (const Punto & n);
         string GetCode()const;
+
+        Imagen PintarRuta(const Imagen & mapa, Paises & paises, const char * FlagPath, const Imagen & avion);
 
         void SetCode(const string & code);
         bool operator==(const Ruta & R)const;
@@ -80,3 +88,5 @@ class Ruta{
 
 
 };
+
+#endif

@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libimagen.a CMakeFiles/imagen.dir/rutas_aereas/src/imagen.cpp.o CMakeFiles/imagen.dir/rutas_aereas/src/imagenES.cpp.o
+/usr/bin/ranlib lib/libimagen.a
