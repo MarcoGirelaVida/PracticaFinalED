@@ -24,23 +24,23 @@ class Ruta{
             private:
                 list<Punto>::iterator p;
             public:
-          iterator(){}
-            bool operator == (const iterator &i){return p == i.p;}  
-            bool operator != (const iterator &i){return p != i.p;}
-            iterator & operator++(){
-                ++p;
-                return *this;
-            }
-            iterator& operator--(){
-                --p;
-                return *this;
-            }
+                iterator(){}
+                bool operator == (const iterator &i){return p == i.p;}  
+                bool operator != (const iterator &i){return p != i.p;}
+                iterator & operator++(){
+                    ++p;
+                    return *this;
+                }
+                iterator& operator--(){
+                    --p;
+                    return *this;
+                }
 
-            Punto & operator*(){
-                return *p;
-            }
-            
-            friend class Punto;
+                Punto & operator*(){
+                    return *p;
+                }
+                
+            friend class Ruta;
             friend class const_iterator;
 	    }; 
 
@@ -64,7 +64,7 @@ class Ruta{
                     return *p;
                 }
 
-                friend class Paises;
+                friend class Ruta;
             
         };
 
