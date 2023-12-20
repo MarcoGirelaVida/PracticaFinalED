@@ -21,17 +21,8 @@ class Ruta{
         void Insertar (const Punto & n);
         void Borrar (const Punto & n);
         string GetCode()const;
-
         Imagen PintarRuta(const Imagen & mapa, Paises & paises, const char * FlagPath, const Imagen & avion);
 
-        void SetCode(const string & code);
-        bool operator==(const Ruta & R)const;
-        bool operator<(const Ruta &R)const;
-
-        class iterator{
-            private:
-                list<Punto>::iterator p;
-            public:
                 iterator(){}
                 bool operator == (const iterator &i){return p == i.p;}  
                 bool operator != (const iterator &i){return p != i.p;}
@@ -85,8 +76,6 @@ class Ruta{
 
         friend istream & operator>>(istream & is, Ruta & R);
         friend ostream & operator<<(ostream & os, const Ruta &R);
-
-
 };
 
 #endif

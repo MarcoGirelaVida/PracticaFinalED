@@ -68,6 +68,7 @@ class Paises{
 	class iterator{
 	private:
 	    unordered_map<pair<double,double>,Pais>::iterator p;
+
 	public:
 	    iterator(){}
 		bool operator == (const iterator &i){return p == i.p;}  
@@ -76,13 +77,6 @@ class Paises{
 			++p;
 			return *this;
 		}
-
-		/*
-		iterator& operator--(){
-			--p;
-			return *this;
-		}
-		*/
 
 		const Pais & operator*()const{
 			return p->second;
@@ -103,13 +97,6 @@ class Paises{
 			++p;
 			return *this;		
 		}
-		
-		/*
-		const_iterator & operator--(){
-			--p;
-			return *this;
-		}
-		*/
 
 		const Pais & operator*()const{
 			return p->second;
@@ -118,8 +105,6 @@ class Paises{
 	    friend class Paises;
 	   
 	};
-
-
 	/**
 	 * @brief Función begin
 	 * @return iterador de Paises apuntando 
@@ -128,17 +113,6 @@ class Paises{
 	 * 
 	 * 
 	 */
-	iterator begin();
-	const_iterator begin()const;
-	iterator end();
-	const_iterator end()const;
-
-	iterator find(const Pais &p);
-	iterator find(const Punto &p);
-
-	friend istream & operator>>(istream & is, Paises & R);
-	friend ostream & operator<<(ostream & os, const Paises &R);
-};
 
 
 #endif
