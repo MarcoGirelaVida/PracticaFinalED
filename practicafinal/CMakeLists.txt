@@ -5,6 +5,7 @@ cmake_minimum_required(VERSION 3.16)
 # Define el nombre del proyecto
 project(practicafinal)
 
+add_compile_options(-Wall -Wextra)
 set(CMAKE_CXX_STANDARD 14)
 
 # Set the output directory for all executables
