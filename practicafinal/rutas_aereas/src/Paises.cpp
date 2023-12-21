@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <vector>
 #include "Pais.h"
 #include "Paises.h"
@@ -11,23 +10,6 @@ void Paises::Insertar(const Pais &P){
 }
 void Paises::Borrar(const Pais &P){
     datos.erase(P.GetPunto());
-=======
-
-#include "Pais.h"
-#include "Paises.h"
-#include <unordered_set>
-#include <vector>
-using namespace std;
-
-
-Paises::Paises(){}
-
-void Paises::Insertar(const Pais &P){
-    datos.emplace(make_pair(P.GetPunto().GetLatitud(),P.GetPunto().GetLongitud()),P);
-}
-void Paises::Borrar(const Pais &P){
-    datos.erase(make_pair(P.GetPunto().GetLatitud(),P.GetPunto().GetLongitud()));
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 }
 
 
@@ -62,13 +44,8 @@ Paises::iterator Paises::find(const Pais &p){
 Paises::iterator Paises::find(const Punto &p){
     
     iterator it;
-<<<<<<< HEAD
     map<Punto,Pais>::iterator i;
     for (i=datos.begin(); i!=datos.end() && !((*i).first == p); ++i);
-=======
-    unordered_map<pair<double,double>,Pais>::iterator i;
-    for (i=datos.begin(); i!=datos.end() && !(i->first.first == p.GetLatitud() && i->first.second == p.GetLongitud()); ++i);
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
         it.p=i;
     return it;
 }

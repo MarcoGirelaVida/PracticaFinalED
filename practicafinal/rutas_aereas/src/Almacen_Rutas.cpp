@@ -1,47 +1,24 @@
-<<<<<<< HEAD
 #include <iostream>
 #include "Almacen_Rutas.h"
 
 using namespace std;
 
-=======
-#include "Almacen_Rutas.h"
-#include <string>
-#include <list>
-#include <iostream>
-
-using namespace std;
-
-
-Almacen_Rutas::Almacen_Rutas(){}
-
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 void Almacen_Rutas::Insertar(const Ruta & R){
 
     rutas.emplace(R.GetCode(),R);
 
 }
 
-<<<<<<< HEAD
 void Almacen_Rutas::Borrar(const Ruta & R){
-=======
-void Almacen_Rutas::Insertar(const Ruta & R){
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
     rutas.erase(R.GetCode());
 
 }
 
-<<<<<<< HEAD
 
 Ruta Almacen_Rutas::GetRuta(const string & a){
 
     map<string,Ruta>::iterator it;
-=======
-Ruta Almacen_Rutas::GetRuta(const string & a){
-
-    unordered_map<string,Ruta>::iterator it;
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
     it = rutas.find(a);
 
     return it->second;

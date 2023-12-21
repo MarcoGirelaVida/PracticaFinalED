@@ -56,11 +56,7 @@ class Pais{
      * @return Pais, el objeto creado  
      */
 
-<<<<<<< HEAD
     Pais(){};
-=======
-    Pais();
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
 
     /**

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 #include "Pais.h"
 
-=======
-#include "Punto.h"
-#include "Pais.h"
-
-    Pais::Pais(){}
-    
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
     Punto Pais::GetPunto()const {
         return p;
     }
