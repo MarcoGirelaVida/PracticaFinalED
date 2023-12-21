@@ -8,10 +8,9 @@ using namespace std;
 
 Almacen_Rutas::Almacen_Rutas(){}
 
-void Almacen_Rutas::Insertar(const Ruta & R){
-
+void Almacen_Rutas::Insertar(const Ruta & R)
+{
     rutas.emplace(R.GetCode(),R);
-
 }
 
 void Almacen_Rutas::Insertar(const Ruta & R){

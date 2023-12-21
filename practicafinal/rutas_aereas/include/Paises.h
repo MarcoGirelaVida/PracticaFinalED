@@ -36,7 +36,7 @@ class Paises{
 	/**
 	 * @brief Conjunto ordenado de países
 	 */
-    unordered_map<pair<double,double>,Pais> datos;
+    unordered_map<Punto, Pais> datos;
   public:
 	
 	/**
@@ -67,7 +67,7 @@ class Paises{
       
 	class iterator{
 	private:
-	    unordered_map<pair<double,double>,Pais>::iterator p;
+	    unordered_map<Punto,Pais>::iterator p;
 	public:
 	    iterator(){}
 		bool operator == (const iterator &i){return p == i.p;}  
@@ -94,7 +94,7 @@ class Paises{
 
 	class const_iterator{
 	private:
-	    unordered_map<pair<double,double>,Pais>::const_iterator p;
+	    unordered_map<Punto, Pais>::const_iterator p;
 	public:
 		const_iterator(){}
 		bool operator == (const const_iterator &i){return p == i.p;}

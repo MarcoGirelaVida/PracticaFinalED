@@ -15,53 +15,56 @@ using namespace std;
   }
 
 
-  void Imagen::Copiar(const Imagen & I){
-
+  void Imagen::Copiar(const Imagen & I)
+  {
     nf = I.nf;
     nc = I.nc;
 
     data = new Pixel*[nf];
-    for (int i=0;i<nf;i++){
+    for (size_t i = 0; i < nf; i++)
+    {
       data[i]=new Pixel[nc];
-      for (int j=0;j<nc;j++){
-        data[i][j].r=I.data[i][j].r;
-        data[i][j].g=I.data[i][j].g;
-        data[i][j].b=I.data[i][j].b;
-        data[i][j].transp=I.data[i][j].transp;
+      for (size_t j = 0; j < nc; j++)
+      {
+        data[i][j].r = I.data[i][j].r;
+        data[i][j].g = I.data[i][j].g;
+        data[i][j].b = I.data[i][j].b;
+        data[i][j].transp = I.data[i][j].transp;
       }
     }
   }
 
-  Imagen::Imagen(){
-
+  Imagen::Imagen()
+  {
     nf = 0;
     nc = 0;
     data = nullptr;
-
   }
 
 
 
 
 
-  Imagen::Imagen(int f,int c){
+  Imagen::Imagen(int f,int c)
+  {
     nf = f;
     nc = c;
     data = new Pixel*[nf];
-    for (int i=0;i<nf;i++){
+    for (size_t i = 0; i < nf; i++)
+    {
       data[i]=new Pixel[nc];
-      for (int j=0;j<nc;j++){
-        data[i][j].r=255;
-        data[i][j].g=255;
-        data[i][j].b=255;
-        data[i][j].transp=255;
+      for (size_t j = 0; j < nc; j++){
+        data[i][j].r = 255;
+        data[i][j].g = 255;
+        data[i][j].b = 255;
+        data[i][j].transp = 255;
       }
     }  
   }
 
 
-  Imagen::Imagen(const Imagen & I){
-
+  Imagen::Imagen(const Imagen & I)
+  {
     // Constructor de copia
 
     //Copio filas y columnas
@@ -71,18 +74,16 @@ using namespace std;
 
     // Reservo memoria y copio los datos
     data = new Pixel*[nf];
-      for (int i=0;i<nf;i++){
-        data[i]=new Pixel[nc];
-    }
+      for (size_t i = 0; i < nf; i++)
+        data[i] = new Pixel[nc];
 
     Copiar(I);
-
   }
 
 
 
- Imagen & Imagen::operator=(const Imagen & I){
-
+ Imagen & Imagen::operator=(const Imagen & I)
+ {
       if (this != &I) { // Evita la autoasignación
           // Libero la memoria actual
           Borrar();
@@ -91,100 +92,106 @@ using namespace std;
       return *this; // Permite encadenar asignaciones (a = b = c)
   }
 
-  Imagen::~Imagen(){
-
+  Imagen::~Imagen()
+  {
     for (size_t i = 0; i < nf; i++)
       delete[] data[i];
 
     delete[] data;
-
   }
+
   /**********************************************/
-  Pixel & Imagen::operator()(int i,int j){
-    assert(i>=0 && i<nf && j>=0 && j<nc);
+  Pixel & Imagen::operator()(int i,int j)
+  {
+    assert(i >= 0 && i < nf && j >= 0 && j < nc);
     return data[i][j];
   }
 
   /**********************************************/
-  const Pixel & Imagen::operator()(int i,int j)const{
-    assert(i>=0 && i<nf && j>=0 && j<nc);
+  const Pixel & Imagen::operator()(int i,int j) const
+  {
+    assert(i >= 0 && i < nf && j >= 0 && j < nc);
     return data[i][j];
   }
 
   /***********************************************/
 
-  void Imagen::EscribirImagen(const char * nombre){
-        unsigned char * aux = new unsigned char [nf*nc*3];
-        unsigned char * m = new unsigned char [nf*nc];
+  void Imagen::EscribirImagen(const char * nombre)
+  {
+        unsigned char * aux = new unsigned char [nf * nc * 3];
+        unsigned char * m = new unsigned char [nf * nc];
         
-        int total = nf*nc*3;
-        for (int i=0;i<total;i+=3){
-          int posi = i /(nc*3);
-          int posj = (i%(nc*3))/3;
+        int total = nf * nc * 3;
+        for (size_t i = 0; i < total; i += 3)
+        {
+          int posi = i / (nc * 3);
+          int posj = (i % (nc * 3)) / 3;
           
-          aux[i]=data[posi][posj].r;
-          aux[i+1]=data[posi][posj].g;
-          aux[i+2]=data[posi][posj].b;
-          m[i/3]=data[posi][posj].transp;
-        
+          aux[i] = data[posi][posj].r;
+          aux[i + 1] = data[posi][posj].g;
+          aux[i + 2] = data[posi][posj].b;
+          m[i / 3] = data[posi][posj].transp;
         }    
     
-        if (!EscribirImagenPPM (nombre, aux,nf,nc)){
+        if (!EscribirImagenPPM (nombre, aux, nf, nc))
           cerr<<"Ha habido un problema en la escritura de "<<nombre<<endl;
-        }	  
-        delete[]aux;
+
+        delete[] aux;
         string n_aux = "mascara_";
-        n_aux =n_aux+nombre;
+        n_aux =n_aux + nombre;
         std::size_t found =n_aux.find(".ppm");
         if (found!=std::string::npos){
-          n_aux =n_aux.substr(0,found);
+          n_aux =n_aux.substr(0, found);
         }
-        n_aux =n_aux+".pgm";
+        n_aux =n_aux + ".pgm";
 
         
-        if (!EscribirImagenPGM (n_aux.c_str(), m,nf,nc)){
-          cerr<<"Ha habido un problema en la escritura de "<<n_aux<<endl;
+        if (!EscribirImagenPGM (n_aux.c_str(), m, nf, nc)){
+          cerr << "Ha habido un problema en la escritura de " << n_aux << endl;
         }	    
-        delete []m;
+        delete[] m;
     
   }  
   /*********************************/
-void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
-      int f,c;
+void Imagen::LeerImagen(const char * nombre,const string &nombremascara)
+{
+      int f, c;
       unsigned char * aux,*aux_mask ;
       
       LeerTipoImagen(nombre, f, c);
-      aux = new unsigned char [f*c*3];
-      LeerImagenPPM (nombre, f,c,aux);
-      if (nombremascara!=""){
+      aux = new unsigned char [f * c * 3];
+      LeerImagenPPM (nombre, f, c, aux);
+      if (nombremascara != "")
+      {
         int fm,cm;
         LeerTipoImagen(nombremascara.c_str(), fm, cm);
-        aux_mask = new unsigned char [fm*cm];
-        LeerImagenPGM(nombremascara.c_str(), fm,cm,aux_mask);
+        aux_mask = new unsigned char [fm * cm];
+        LeerImagenPGM(nombremascara.c_str(), fm, cm, aux_mask);
       }
-      else{
+      else
 	      aux_mask=0;
-      }	
       
       
       Imagen I(f,c);
       int total = f*c*3;
-      for (int i=0;i<total;i+=3){
-        int posi = i /(c*3);
-        int posj = (i%(c*3))/3;
+      for (size_t i = 0; i < total; i += 3)
+      {
+        int posi = i / (c * 3);
+        int posj = (i % (c * 3)) / 3;
       //   cout<<posi<<" " <<posj<<endl;
-          I.data[posi][posj].r=aux[i];
-          I.data[posi][posj].g=aux[i+1];
-          I.data[posi][posj].b=aux[i+2];
-          if (aux_mask!=0)
-            I.data[posi][posj].transp=aux_mask[i/3];
+          I.data[posi][posj].r = aux[i];
+          I.data[posi][posj].g = aux[i + 1];
+          I.data[posi][posj].b = aux[i + 2];
+          if (aux_mask != 0)
+            I.data[posi][posj].transp = aux_mask[i / 3];
           else  
-            I.data[posi][posj].transp=255;
+            I.data[posi][posj].transp = 255;
 	    }
  
       *this = I;
 
-      if (aux_mask!=0) delete[]aux_mask;
+      if (aux_mask != 0)
+        delete[] aux_mask;
       delete []aux;
 
       
@@ -207,18 +214,19 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
  /*********************************/
 
   void Imagen::PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado){
-      assert(nf>=posi+I.nf && nc>=posj+I.nc);
+      assert(nf >= posi + I.nf && nc >= posj + I.nc);
       
-      for (int i=0;i<I.nf;i++)
-        for (int j=0;j<I.nc;j++)
-          if (i+posi>=0 && i+posi<nf && j+posj>=0 && j+posj<nc){
-            if (I.data[i][j].transp!=0){
-              if (tippegado==OPACO)
-                data[i+posi][j+posj]=I.data[i][j];
+      for (size_t i = 0; i < I.nf; i++)
+        for (size_t j = 0; j<I.nc; j++)
+          if (i + posi >= 0 && i + posi < nf && j + posj >= 0 && j + posj < nc){
+            if (I.data[i][j].transp != 0)
+            {
+              if (tippegado == OPACO)
+                data[i+posi][j+posj] = I.data[i][j];
               else{
-                data[i+posi][j+posj].r=(data[i+posi][j+posj].r+I.data[i][j].r)/2;
-                data[i+posi][j+posj].g=(data[i+posi][j+posj].r+I.data[i][j].g)/2;
-                data[i+posi][j+posj].b=(data[i+posi][j+posj].r+I.data[i][j].b)/2;
+                data[i+posi][j+posj].r = (data[i+posi][j+posj].r+I.data[i][j].r) / 2;
+                data[i+posi][j+posj].g = (data[i+posi][j+posj].r+I.data[i][j].g) / 2;
+                data[i+posi][j+posj].b = (data[i+posi][j+posj].r+I.data[i][j].b) / 2;
               }  
             }  
           }	
@@ -231,8 +239,8 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
   
   Imagen aux = Imagen(dimi, dimj);
 
-  for (int i=posi; i<dimi; i++){
-    for (int j=posj; j<dimj; j++){
+  for (size_t i = posi; i < dimi; i++){
+    for (size_t j = posj; j < dimj; j++){
       aux.data[i-posi][j-posj].r = data[i][j].r;
       aux.data[i-posi][j-posj].g = data[i][j].g;
       aux.data[i-posi][j-posj].b = data[i][j].b;
@@ -245,7 +253,7 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
   /*********************************/
 
   void Imagen::Rota(const Imagen & Io,double angulo){
-    double rads=angulo;
+    double rads = angulo;
     double coseno = cos(angulo);
     double seno = sin(angulo);
     //Para obtener las dimensiones de la imagen
@@ -287,9 +295,9 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
     newimgcols=(unsigned)ceil((double)new_col_max-new_col_min);
    
     Imagen Iout(newimgrows,newimgcols);
-    for(int rows=0;rows<newimgrows;rows++)
+    for(size_t rows=0;rows<newimgrows;rows++)
       {
-	for(int cols=0;cols<newimgcols;cols++)
+	for(size_t cols=0;cols<newimgcols;cols++)
 	{
 	   float oldrowcos=((float)rows+new_row_min)*cos(-rads);
 	   float oldrowsin=((float)rows+new_row_min)*sin(-rads);

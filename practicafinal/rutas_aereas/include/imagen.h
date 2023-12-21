@@ -15,7 +15,7 @@ struct Pixel{
 class Imagen{
   private:
     Pixel ** data;
-    int nf,nc;
+    size_t nf,nc;
     void Borrar();
     void Copiar(const Imagen & I);
 
