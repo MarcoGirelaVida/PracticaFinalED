@@ -1,5 +1,5 @@
 #include <string>
-#include <unordered_map>
+#include <map>
 #include <iostream>
 #include "Ruta.h"
 #include "imagen.h"
@@ -11,25 +11,27 @@ class Almacen_Rutas{
 
 
     private:
-        unordered_map<string,Ruta> rutas;
+        map<string,Ruta> rutas;
     public:
-        Almacen_Rutas();
+        Almacen_Rutas(){};
         void Insertar(const Ruta & R);
         void Borrar(const Ruta & R);
         Ruta GetRuta(const string & a);
-        Imagen PintarRuta(const Imagen & mapa, const Ruta & R);
-
-
 
         class iterator{
             private:
-                unordered_map<string,Ruta>::iterator p;
+                map<string,Ruta>::iterator p;
             public:
                 iterator(){}
                 bool operator == (const iterator &i){return p == i.p;}  
                 bool operator != (const iterator &i){return p != i.p;}
                 iterator & operator++(){
                     ++p;
+                    return *this;
+                }
+
+                iterator & operator--(){
+                    --p;
                     return *this;
                 }
 
@@ -43,13 +45,18 @@ class Almacen_Rutas{
 
         class const_iterator{
             private:
-                unordered_map<string,Ruta>::const_iterator p;
+                map<string,Ruta>::const_iterator p;
             public:
                 const_iterator(){}
                 bool operator == (const const_iterator &i){return p == i.p;}  
                 bool operator != (const const_iterator &i){return p != i.p;}
                 const_iterator & operator++(){
                     ++p;
+                    return *this;
+                }
+
+                const_iterator & operator--(){
+                    --p;
                     return *this;
                 }
 
@@ -66,7 +73,7 @@ class Almacen_Rutas{
         const_iterator end()const;
 
         friend istream & operator >> (istream & is, Almacen_Rutas & AR);
-        friend ostream & operator <<(ostream & os, const Almacen_Rutas &R);
+        friend ostream & operator <<(ostream & os, const Almacen_Rutas &AR);
 
 
 };

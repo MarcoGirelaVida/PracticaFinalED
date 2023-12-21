@@ -17,12 +17,12 @@ class Ruta{
         list<Punto> puntos;
         string code;
     public:
-        Ruta();
+        Ruta(){};
         void Insertar (const Punto & n);
         void Borrar (const Punto & n);
         string GetCode()const;
-
-        Imagen PintarRuta(const Imagen & mapa, Paises & paises, const char * FlagPath, const Imagen & avion);
+        void PintarAviones(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindisf,int mindisc);
+        Imagen PintarRuta(const Imagen & mapa, Paises & paises, const string FlagPath, const Imagen & avion);
 
         void SetCode(const string & code);
         bool operator==(const Ruta & R)const;

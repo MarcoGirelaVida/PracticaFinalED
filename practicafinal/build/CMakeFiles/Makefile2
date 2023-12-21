@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/Prac
 
 # The main recursive "all" target.
 all: CMakeFiles/imagen.dir/all
+all: CMakeFiles/paises.dir/all
 all: CMakeFiles/pruebarotacion.dir/all
 all: CMakeFiles/pruebapegado.dir/all
 all: CMakeFiles/ruta_aerea.dir/all
@@ -76,6 +77,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/imagen.dir/clean
+clean: CMakeFiles/paises.dir/clean
 clean: CMakeFiles/pruebarotacion.dir/clean
 clean: CMakeFiles/pruebapegado.dir/clean
 clean: CMakeFiles/ruta_aerea.dir/clean
@@ -109,13 +111,39 @@ CMakeFiles/imagen.dir/clean:
 .PHONY : CMakeFiles/imagen.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/paises.dir
+
+# All Build rule for target.
+CMakeFiles/paises.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target paises"
+.PHONY : CMakeFiles/paises.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/paises.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/paises.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles 0
+.PHONY : CMakeFiles/paises.dir/rule
+
+# Convenience name for target.
+paises: CMakeFiles/paises.dir/rule
+.PHONY : paises
+
+# clean rule for target.
+CMakeFiles/paises.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/clean
+.PHONY : CMakeFiles/paises.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/pruebarotacion.dir
 
 # All Build rule for target.
 CMakeFiles/pruebarotacion.dir/all: CMakeFiles/imagen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebarotacion.dir/build.make CMakeFiles/pruebarotacion.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebarotacion.dir/build.make CMakeFiles/pruebarotacion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=7,8 "Built target pruebarotacion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=13,14 "Built target pruebarotacion"
 .PHONY : CMakeFiles/pruebarotacion.dir/all
 
 # Build rule for subdir invocation for target.
@@ -141,7 +169,7 @@ CMakeFiles/pruebarotacion.dir/clean:
 CMakeFiles/pruebapegado.dir/all: CMakeFiles/imagen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebapegado.dir/build.make CMakeFiles/pruebapegado.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pruebapegado.dir/build.make CMakeFiles/pruebapegado.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=5,6 "Built target pruebapegado"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=11,12 "Built target pruebapegado"
 .PHONY : CMakeFiles/pruebapegado.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,14 +193,15 @@ CMakeFiles/pruebapegado.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/ruta_aerea.dir/all: CMakeFiles/imagen.dir/all
+CMakeFiles/ruta_aerea.dir/all: CMakeFiles/paises.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ruta_aerea.dir/build.make CMakeFiles/ruta_aerea.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ruta_aerea.dir/build.make CMakeFiles/ruta_aerea.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=9,10 "Built target ruta_aerea"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=15,16 "Built target ruta_aerea"
 .PHONY : CMakeFiles/ruta_aerea.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ruta_aerea.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ruta_aerea.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles 0
 .PHONY : CMakeFiles/ruta_aerea.dir/rule

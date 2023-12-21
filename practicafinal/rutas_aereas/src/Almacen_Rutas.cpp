@@ -1,12 +1,7 @@
-#include "Almacen_Rutas.h"
-#include <string>
-#include <list>
 #include <iostream>
+#include "Almacen_Rutas.h"
 
 using namespace std;
-
-
-Almacen_Rutas::Almacen_Rutas(){}
 
 void Almacen_Rutas::Insertar(const Ruta & R){
 
@@ -14,15 +9,16 @@ void Almacen_Rutas::Insertar(const Ruta & R){
 
 }
 
-void Almacen_Rutas::Insertar(const Ruta & R){
+void Almacen_Rutas::Borrar(const Ruta & R){
 
     rutas.erase(R.GetCode());
 
 }
 
+
 Ruta Almacen_Rutas::GetRuta(const string & a){
 
-    unordered_map<string,Ruta>::iterator it;
+    map<string,Ruta>::iterator it;
     it = rutas.find(a);
 
     return it->second;

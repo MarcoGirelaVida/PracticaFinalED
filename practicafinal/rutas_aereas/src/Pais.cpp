@@ -1,8 +1,5 @@
-#include "Punto.h"
 #include "Pais.h"
 
-    Pais::Pais(){}
-    
     Punto Pais::GetPunto()const {
         return p;
     }

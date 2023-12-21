@@ -93,6 +93,7 @@ ruta_aerea_EXTERNAL_OBJECTS =
 bin/ruta_aerea: CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
 bin/ruta_aerea: CMakeFiles/ruta_aerea.dir/build.make
 bin/ruta_aerea: lib/libimagen.a
+bin/ruta_aerea: lib/libpaises.a
 bin/ruta_aerea: CMakeFiles/ruta_aerea.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/ruta_aerea"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ruta_aerea.dir/link.txt --verbose=$(VERBOSE)

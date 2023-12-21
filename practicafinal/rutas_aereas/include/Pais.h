@@ -56,7 +56,7 @@ class Pais{
      * @return Pais, el objeto creado  
      */
 
-    Pais();
+    Pais(){};
 
 
     /**

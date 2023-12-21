@@ -8,6 +8,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
   /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Punto.h \
   /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Ruta.h \
   /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/imagen.h \
+  /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/imagenES.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -87,7 +88,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
-  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -96,8 +96,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
   /usr/include/c++/13/bits/hash_bytes.h \
-  /usr/include/c++/13/bits/hashtable.h \
-  /usr/include/c++/13/bits/hashtable_policy.h \
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
@@ -127,11 +125,13 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_list.h \
+  /usr/include/c++/13/bits/stl_map.h \
+  /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/stringfwd.h \
-  /usr/include/c++/13/bits/unordered_map.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/utility.h \
   /usr/include/c++/13/cctype \
@@ -157,6 +157,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/list \
+  /usr/include/c++/13/map \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/stdexcept \
@@ -166,7 +167,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
-  /usr/include/c++/13/unordered_map \
   /usr/include/c++/13/x86_64-redhat-linux/bits/atomic_word.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h \
@@ -243,8 +243,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/c++/13/x86_64-redhat-linux/bits/basic_file.h:
 
-/usr/include/c++/13/unordered_map:
-
 /usr/include/c++/13/type_traits:
 
 /usr/include/c++/13/tuple:
@@ -289,7 +287,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/c++/13/bits/streambuf.tcc:
 
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Punto.h:
+/usr/include/c++/13/bits/stl_tree.h:
 
 /usr/include/bits/types/struct_timespec.h:
 
@@ -315,11 +313,13 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/c++/13/bits/unordered_map.h:
-
 /usr/include/bits/types/__locale_t.h:
 
 /usr/include/bits/types/__FILE.h:
+
+/usr/include/c++/13/bits/char_traits.h:
+
+/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/imagenES.h:
 
 /usr/include/bits/types.h:
 
@@ -337,21 +337,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/bits/types/time_t.h:
 
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/src/ruta_aerea.cpp:
-
-/usr/include/bits/stdlib-float.h:
-
-/usr/include/bits/time64.h:
-
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/time.h:
-
-/usr/include/c++/13/string:
-
-/usr/include/bits/byteswap.h:
+/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Punto.h:
 
 /usr/include/bits/types/struct___jmp_buf_tag.h:
 
@@ -387,7 +373,21 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/c++/13/bits/stl_construct.h:
 
+/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Pais.h:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/c++/13/iostream:
+
+/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Ruta.h:
+
+/usr/include/c++/13/cwctype:
+
+/usr/include/bits/types/wint_t.h:
+
 /usr/include/bits/struct_mutex.h:
+
+/usr/include/c++/13/bits/stl_map.h:
 
 /usr/include/bits/cpu-set.h:
 
@@ -411,6 +411,22 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/bits/locale.h:
 
+/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/src/ruta_aerea.cpp:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/bits/time64.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/c++/13/string:
+
+/usr/include/bits/byteswap.h:
+
 /usr/include/features.h:
 
 /usr/include/bits/endianness.h:
@@ -427,10 +443,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/bits/types/mbstate_t.h:
 
-/usr/include/bits/floatn-common.h:
-
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Pais.h:
-
 /usr/include/bits/floatn.h:
 
 /usr/include/bits/libc-header-start.h:
@@ -443,13 +455,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/bits/timex.h:
 
-/usr/include/c++/13/iostream:
-
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Ruta.h:
-
-/usr/include/c++/13/cwctype:
-
-/usr/include/bits/types/wint_t.h:
+/usr/include/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/c++/13/cerrno:
 
@@ -529,10 +535,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/c++/13/bits/exception.h:
 
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/c++/13/bits/hashtable_policy.h:
-
 /usr/include/c++/13/fstream:
 
 /usr/include/c++/13/cstdio:
@@ -541,19 +543,21 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 
 /usr/include/c++/13/bits/stl_pair.h:
 
-/usr/include/c++/13/bits/enable_special_members.h:
-
 /usr/include/c++/13/bits/erase_if.h:
 
 /usr/include/c++/13/bits/exception_defines.h:
 
 /usr/include/c++/13/bits/localefwd.h:
 
+/usr/include/c++/13/bits/stl_multimap.h:
+
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/bits/exception_ptr.h:
 
 /usr/include/c++/13/bits/fstream.tcc:
+
+/usr/include/c++/13/map:
 
 /usr/include/c++/13/bits/refwrap.h:
 
@@ -566,10 +570,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o: /home/davidpereztob
 /usr/include/errno.h:
 
 /usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/13/bits/hashtable.h:
 
 /usr/include/c++/13/bits/invoke.h:
 

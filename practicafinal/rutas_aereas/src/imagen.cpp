@@ -209,6 +209,9 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
   void Imagen::PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado){
       assert(nf>=posi+I.nf && nc>=posj+I.nc);
       
+      posi-=I.nf/2;
+      posj-=I.nc/2;
+
       for (int i=0;i<I.nf;i++)
         for (int j=0;j<I.nc;j++)
           if (i+posi>=0 && i+posi<nf && j+posj>=0 && j+posj<nc){
@@ -305,8 +308,11 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
 	      Iout(rows,cols)=Io(old_row,old_col);
               
 	   }
-	   else
+	   else{
 	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;
+       Iout(rows,cols).transp=0;
+     }
+       
 	}
     }
     *this = Iout;

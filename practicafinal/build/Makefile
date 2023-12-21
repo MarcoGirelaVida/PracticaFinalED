@@ -130,6 +130,19 @@ imagen/fast:
 .PHONY : imagen/fast
 
 #=============================================================================
+# Target rules for targets named paises
+
+# Build rule for target.
+paises: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paises
+.PHONY : paises
+
+# fast build rule for target.
+paises/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/build
+.PHONY : paises/fast
+
+#=============================================================================
 # Target rules for targets named pruebarotacion
 
 # Build rule for target.
@@ -180,6 +193,126 @@ doc_doxygen: cmake_check_build_system
 doc_doxygen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/doc_doxygen.dir/build.make CMakeFiles/doc_doxygen.dir/build
 .PHONY : doc_doxygen/fast
+
+rutas_aereas/src/Almacen_Rutas.o: rutas_aereas/src/Almacen_Rutas.cpp.o
+.PHONY : rutas_aereas/src/Almacen_Rutas.o
+
+# target to build an object file
+rutas_aereas/src/Almacen_Rutas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Almacen_Rutas.cpp.o
+.PHONY : rutas_aereas/src/Almacen_Rutas.cpp.o
+
+rutas_aereas/src/Almacen_Rutas.i: rutas_aereas/src/Almacen_Rutas.cpp.i
+.PHONY : rutas_aereas/src/Almacen_Rutas.i
+
+# target to preprocess a source file
+rutas_aereas/src/Almacen_Rutas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Almacen_Rutas.cpp.i
+.PHONY : rutas_aereas/src/Almacen_Rutas.cpp.i
+
+rutas_aereas/src/Almacen_Rutas.s: rutas_aereas/src/Almacen_Rutas.cpp.s
+.PHONY : rutas_aereas/src/Almacen_Rutas.s
+
+# target to generate assembly for a file
+rutas_aereas/src/Almacen_Rutas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Almacen_Rutas.cpp.s
+.PHONY : rutas_aereas/src/Almacen_Rutas.cpp.s
+
+rutas_aereas/src/Pais.o: rutas_aereas/src/Pais.cpp.o
+.PHONY : rutas_aereas/src/Pais.o
+
+# target to build an object file
+rutas_aereas/src/Pais.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Pais.cpp.o
+.PHONY : rutas_aereas/src/Pais.cpp.o
+
+rutas_aereas/src/Pais.i: rutas_aereas/src/Pais.cpp.i
+.PHONY : rutas_aereas/src/Pais.i
+
+# target to preprocess a source file
+rutas_aereas/src/Pais.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Pais.cpp.i
+.PHONY : rutas_aereas/src/Pais.cpp.i
+
+rutas_aereas/src/Pais.s: rutas_aereas/src/Pais.cpp.s
+.PHONY : rutas_aereas/src/Pais.s
+
+# target to generate assembly for a file
+rutas_aereas/src/Pais.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Pais.cpp.s
+.PHONY : rutas_aereas/src/Pais.cpp.s
+
+rutas_aereas/src/Paises.o: rutas_aereas/src/Paises.cpp.o
+.PHONY : rutas_aereas/src/Paises.o
+
+# target to build an object file
+rutas_aereas/src/Paises.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Paises.cpp.o
+.PHONY : rutas_aereas/src/Paises.cpp.o
+
+rutas_aereas/src/Paises.i: rutas_aereas/src/Paises.cpp.i
+.PHONY : rutas_aereas/src/Paises.i
+
+# target to preprocess a source file
+rutas_aereas/src/Paises.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Paises.cpp.i
+.PHONY : rutas_aereas/src/Paises.cpp.i
+
+rutas_aereas/src/Paises.s: rutas_aereas/src/Paises.cpp.s
+.PHONY : rutas_aereas/src/Paises.s
+
+# target to generate assembly for a file
+rutas_aereas/src/Paises.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Paises.cpp.s
+.PHONY : rutas_aereas/src/Paises.cpp.s
+
+rutas_aereas/src/Punto.o: rutas_aereas/src/Punto.cpp.o
+.PHONY : rutas_aereas/src/Punto.o
+
+# target to build an object file
+rutas_aereas/src/Punto.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Punto.cpp.o
+.PHONY : rutas_aereas/src/Punto.cpp.o
+
+rutas_aereas/src/Punto.i: rutas_aereas/src/Punto.cpp.i
+.PHONY : rutas_aereas/src/Punto.i
+
+# target to preprocess a source file
+rutas_aereas/src/Punto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Punto.cpp.i
+.PHONY : rutas_aereas/src/Punto.cpp.i
+
+rutas_aereas/src/Punto.s: rutas_aereas/src/Punto.cpp.s
+.PHONY : rutas_aereas/src/Punto.s
+
+# target to generate assembly for a file
+rutas_aereas/src/Punto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Punto.cpp.s
+.PHONY : rutas_aereas/src/Punto.cpp.s
+
+rutas_aereas/src/Ruta.o: rutas_aereas/src/Ruta.cpp.o
+.PHONY : rutas_aereas/src/Ruta.o
+
+# target to build an object file
+rutas_aereas/src/Ruta.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Ruta.cpp.o
+.PHONY : rutas_aereas/src/Ruta.cpp.o
+
+rutas_aereas/src/Ruta.i: rutas_aereas/src/Ruta.cpp.i
+.PHONY : rutas_aereas/src/Ruta.i
+
+# target to preprocess a source file
+rutas_aereas/src/Ruta.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Ruta.cpp.i
+.PHONY : rutas_aereas/src/Ruta.cpp.i
+
+rutas_aereas/src/Ruta.s: rutas_aereas/src/Ruta.cpp.s
+.PHONY : rutas_aereas/src/Ruta.s
+
+# target to generate assembly for a file
+rutas_aereas/src/Ruta.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paises.dir/build.make CMakeFiles/paises.dir/rutas_aereas/src/Ruta.cpp.s
+.PHONY : rutas_aereas/src/Ruta.cpp.s
 
 rutas_aereas/src/imagen.o: rutas_aereas/src/imagen.cpp.o
 .PHONY : rutas_aereas/src/imagen.o
@@ -311,9 +444,25 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... doc_doxygen"
 	@echo "... imagen"
+	@echo "... paises"
 	@echo "... pruebapegado"
 	@echo "... pruebarotacion"
 	@echo "... ruta_aerea"
+	@echo "... rutas_aereas/src/Almacen_Rutas.o"
+	@echo "... rutas_aereas/src/Almacen_Rutas.i"
+	@echo "... rutas_aereas/src/Almacen_Rutas.s"
+	@echo "... rutas_aereas/src/Pais.o"
+	@echo "... rutas_aereas/src/Pais.i"
+	@echo "... rutas_aereas/src/Pais.s"
+	@echo "... rutas_aereas/src/Paises.o"
+	@echo "... rutas_aereas/src/Paises.i"
+	@echo "... rutas_aereas/src/Paises.s"
+	@echo "... rutas_aereas/src/Punto.o"
+	@echo "... rutas_aereas/src/Punto.i"
+	@echo "... rutas_aereas/src/Punto.s"
+	@echo "... rutas_aereas/src/Ruta.o"
+	@echo "... rutas_aereas/src/Ruta.i"
+	@echo "... rutas_aereas/src/Ruta.s"
 	@echo "... rutas_aereas/src/imagen.o"
 	@echo "... rutas_aereas/src/imagen.i"
 	@echo "... rutas_aereas/src/imagen.s"

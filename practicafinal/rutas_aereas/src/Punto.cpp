@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Punto.h"
 #include <cassert>
+#include "Punto.h"
 
 using namespace std;
 

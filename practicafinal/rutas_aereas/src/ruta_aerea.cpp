@@ -1,9 +1,28 @@
 #include <iostream>
 #include <fstream>
-#include <Paises.h>
-#include <Almacen_Rutas.h>
+#include "imagenES.h"
+#include "imagen.h"
+#include "Punto.h"
+#include "Pais.h"
+#include "Paises.h"
+#include "Ruta.h"
+#include "Almacen_Rutas.h"
 
 using namespace std;
+
+
+void Pintar(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindisf,int mindisc){
+
+
+    
+
+
+
+
+}
+
+
+
 
 
 
@@ -51,5 +70,3 @@ int main(int argc, char * argv[]){
   return 0;
 
 }
-
-

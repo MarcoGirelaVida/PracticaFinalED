@@ -21,7 +21,7 @@ include_directories(${BASE_FOLDER}/include)
 # Genera librería imagen a partir de imagen.cpp e imagenES.cpp
 # CAMBIO EN EL DIRECTORIO DE LOS FUENTES
 add_library(imagen ${BASE_FOLDER}/src/imagen.cpp ${BASE_FOLDER}/src/imagenES.cpp)
-
+add_library(paises ${BASE_FOLDER}/src/Pais.cpp ${BASE_FOLDER}/src/Paises.cpp ${BASE_FOLDER}/src/Punto.cpp ${BASE_FOLDER}/src/Ruta.cpp ${BASE_FOLDER}/src/Almacen_Rutas.cpp)
 # Genera el ejecutable de X.cpp (si es que este fichero existe)
 # E indica que depende de la libreria image
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pruebarotacion.cpp)
@@ -36,7 +36,7 @@ endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/ruta_aerea.cpp)
     add_executable(ruta_aerea ${BASE_FOLDER}/src/ruta_aerea.cpp)
-    target_link_libraries(ruta_aerea LINK_PUBLIC imagen)
+    target_link_libraries(ruta_aerea LINK_PUBLIC imagen paises)
 endif()
 
 # check if Doxygen is installed

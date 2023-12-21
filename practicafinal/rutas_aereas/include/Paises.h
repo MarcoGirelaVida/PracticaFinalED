@@ -4,7 +4,8 @@
  */ 
 
 #include "Pais.h"
-#include <unordered_map>
+#include "Punto.h"
+#include <map>
 using namespace std;
 
 #ifndef PAISES
@@ -36,7 +37,7 @@ class Paises{
 	/**
 	 * @brief Conjunto ordenado de países
 	 */
-    unordered_map<pair<double,double>,Pais> datos;
+    map<Punto,Pais> datos;
   public:
 	
 	/**
@@ -45,7 +46,7 @@ class Paises{
 	 * @return Paises, el objeto creado
 	 */
 
-    Paises();
+    Paises(){};
 
 	/**
 	 * @brief Inserción de un pais en el conjunto
@@ -67,7 +68,7 @@ class Paises{
       
 	class iterator{
 	private:
-	    unordered_map<pair<double,double>,Pais>::iterator p;
+	    map<Punto,Pais>::iterator p;
 	public:
 	    iterator(){}
 		bool operator == (const iterator &i){return p == i.p;}  
@@ -77,13 +78,12 @@ class Paises{
 			return *this;
 		}
 
-		/*
+		
 		iterator& operator--(){
 			--p;
 			return *this;
 		}
-		*/
-
+		
 		const Pais & operator*()const{
 			return p->second;
 		}
@@ -94,7 +94,7 @@ class Paises{
 
 	class const_iterator{
 	private:
-	    unordered_map<pair<double,double>,Pais>::const_iterator p;
+	    map<Punto,Pais>::const_iterator p;
 	public:
 		const_iterator(){}
 		bool operator == (const const_iterator &i){return p == i.p;}
@@ -104,12 +104,10 @@ class Paises{
 			return *this;		
 		}
 		
-		/*
 		const_iterator & operator--(){
 			--p;
 			return *this;
 		}
-		*/
 
 		const Pais & operator*()const{
 			return p->second;
@@ -119,15 +117,6 @@ class Paises{
 	   
 	};
 
-
-	/**
-	 * @brief Función begin
-	 * @return iterador de Paises apuntando 
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
 	iterator begin();
 	const_iterator begin()const;
 	iterator end();

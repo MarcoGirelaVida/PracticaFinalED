@@ -9,6 +9,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
  /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Punto.h
  /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/Ruta.h
  /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/imagen.h
+ /home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/rutas_aereas/include/imagenES.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -88,7 +89,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
  /usr/include/c++/13/bits/cpp_type_traits.h
  /usr/include/c++/13/bits/cxxabi_forced.h
  /usr/include/c++/13/bits/cxxabi_init_exception.h
- /usr/include/c++/13/bits/enable_special_members.h
  /usr/include/c++/13/bits/erase_if.h
  /usr/include/c++/13/bits/exception.h
  /usr/include/c++/13/bits/exception_defines.h
@@ -97,8 +97,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
  /usr/include/c++/13/bits/functexcept.h
  /usr/include/c++/13/bits/functional_hash.h
  /usr/include/c++/13/bits/hash_bytes.h
- /usr/include/c++/13/bits/hashtable.h
- /usr/include/c++/13/bits/hashtable_policy.h
  /usr/include/c++/13/bits/invoke.h
  /usr/include/c++/13/bits/ios_base.h
  /usr/include/c++/13/bits/istream.tcc
@@ -128,11 +126,13 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
  /usr/include/c++/13/bits/stl_iterator_base_funcs.h
  /usr/include/c++/13/bits/stl_iterator_base_types.h
  /usr/include/c++/13/bits/stl_list.h
+ /usr/include/c++/13/bits/stl_map.h
+ /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_pair.h
+ /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/streambuf.tcc
  /usr/include/c++/13/bits/streambuf_iterator.h
  /usr/include/c++/13/bits/stringfwd.h
- /usr/include/c++/13/bits/unordered_map.h
  /usr/include/c++/13/bits/uses_allocator.h
  /usr/include/c++/13/bits/utility.h
  /usr/include/c++/13/cctype
@@ -158,6 +158,7 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
  /usr/include/c++/13/list
+ /usr/include/c++/13/map
  /usr/include/c++/13/new
  /usr/include/c++/13/ostream
  /usr/include/c++/13/stdexcept
@@ -167,7 +168,6 @@ CMakeFiles/ruta_aerea.dir/rutas_aereas/src/ruta_aerea.cpp.o
  /usr/include/c++/13/tuple
  /usr/include/c++/13/type_traits
  /usr/include/c++/13/typeinfo
- /usr/include/c++/13/unordered_map
  /usr/include/c++/13/x86_64-redhat-linux/bits/atomic_word.h
  /usr/include/c++/13/x86_64-redhat-linux/bits/basic_file.h
  /usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h
