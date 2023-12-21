@@ -2,10 +2,20 @@
 #include <string>
 #include <list>
 #include <iostream>
+<<<<<<< HEAD
+=======
+#include "Punto.h"
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 #include <cmath>
 
 using namespace std;
 
+<<<<<<< HEAD
+=======
+
+Ruta::Ruta(){}
+
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 void Ruta::Insertar (const Punto & n){
 
     puntos.push_back(n);
@@ -30,6 +40,7 @@ void Ruta::SetCode(const string & code){
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -81,6 +92,9 @@ void Ruta::PintarAviones(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &av
 
 
 Imagen Ruta::PintarRuta(const Imagen & mapa, Paises & paises, const string FlagPath, const Imagen & avion){
+=======
+Imagen Ruta::PintarRuta(const Imagen & mapa, Paises & paises, const char * FlagPath, const Imagen & avion){
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
     iterator it1 = begin();
     iterator it2 = begin(); ++it2;
@@ -97,13 +111,18 @@ Imagen Ruta::PintarRuta(const Imagen & mapa, Paises & paises, const string FlagP
         im_pais_1.LeerImagen((FlagPath + '/' + pais1.GetBandera()).c_str());
         im_pais_1.LeerImagen((FlagPath + '/' + pais2.GetBandera()).c_str());
 
+<<<<<<< HEAD
         pair<double,double> pos1_mapa, pos2_mapa;
+=======
+        pair<double,double> pos1_mapa, pos2_mapa,posMedio_mapa;
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
         pos1_mapa.first = (mapa.num_filas()/180.0)*(90-(*it1).GetLatitud());
         pos1_mapa.second = (mapa.num_cols()/360.0)*(180+(*it1).GetLongitud());
 
         pos2_mapa.first = (mapa.num_filas()/180.0)*(90-(*it2).GetLatitud());
         pos2_mapa.second = (mapa.num_cols()/360.0)*(180+(*it2).GetLongitud());
 
+<<<<<<< HEAD
         PintarAviones(pos1_mapa.first, pos2_mapa.first, pos1_mapa.second, pos2_mapa.second, out, avion, 0, 0);
 
 
@@ -114,6 +133,28 @@ Imagen Ruta::PintarRuta(const Imagen & mapa, Paises & paises, const string FlagP
         ++it1;
         ++it2;
 
+=======
+        posMedio_mapa.first = (pos1_mapa.first + pos2_mapa.first) / 2;
+        posMedio_mapa.second = (pos1_mapa.second + pos2_mapa.second) / 2;
+
+
+
+        double deltaX = pos1_mapa.first - pos1_mapa.second;
+        double deltaY = pos2_mapa.first - pos2_mapa.second;
+        double angulo = atan2(deltaY, deltaX) * 180.0 / M_PI;
+
+        Imagen im_avion_rotado;
+        im_avion_rotado.Rota(avion,angulo);
+
+        // Decidir si queremos el pegado opaco o no
+        out.PutImagen(pos1_mapa.first,pos1_mapa.second,im_avion_rotado,BLENDING);
+        out.PutImagen(pos2_mapa.first,pos2_mapa.second, im_avion_rotado,BLENDING);
+        out.PutImagen(posMedio_mapa.first,posMedio_mapa.second, im_avion_rotado, BLENDING);
+
+        // Pegamos las imagenes de los mapas
+        out.PutImagen(pos1_mapa.first,pos1_mapa.second,im_pais_1);
+        out.PutImagen(pos2_mapa.first,pos2_mapa.second, im_pais_2);
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
     }
 
     return out;

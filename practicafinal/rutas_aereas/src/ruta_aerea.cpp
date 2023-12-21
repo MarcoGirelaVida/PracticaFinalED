@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+<<<<<<< HEAD
 #include "imagenES.h"
 #include "imagen.h"
 #include "Punto.h"
@@ -7,10 +8,15 @@
 #include "Paises.h"
 #include "Ruta.h"
 #include "Almacen_Rutas.h"
+=======
+#include <Paises.h>
+#include <Almacen_Rutas.h>
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
 using namespace std;
 
 
+<<<<<<< HEAD
 void Pintar(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindisf,int mindisc){
 
 
@@ -25,6 +31,8 @@ void Pintar(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindi
 
 
 
+=======
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
 int main(int argc, char * argv[]){
   if (argc!=7){
@@ -69,4 +77,10 @@ int main(int argc, char * argv[]){
 
   return 0;
 
+<<<<<<< HEAD
 }
+=======
+}
+
+
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727

@@ -308,11 +308,16 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
 	      Iout(rows,cols)=Io(old_row,old_col);
               
 	   }
+<<<<<<< HEAD
 	   else{
 	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;
        Iout(rows,cols).transp=0;
      }
        
+=======
+	   else
+	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 	}
     }
     *this = Iout;

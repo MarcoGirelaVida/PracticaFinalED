@@ -4,8 +4,12 @@
  */ 
 
 #include "Pais.h"
+<<<<<<< HEAD
 #include "Punto.h"
 #include <map>
+=======
+#include <unordered_map>
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 using namespace std;
 
 #ifndef PAISES
@@ -37,7 +41,11 @@ class Paises{
 	/**
 	 * @brief Conjunto ordenado de países
 	 */
+<<<<<<< HEAD
     map<Punto,Pais> datos;
+=======
+    unordered_map<pair<double,double>,Pais> datos;
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
   public:
 	
 	/**
@@ -46,7 +54,11 @@ class Paises{
 	 * @return Paises, el objeto creado
 	 */
 
+<<<<<<< HEAD
     Paises(){};
+=======
+    Paises();
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
 	/**
 	 * @brief Inserción de un pais en el conjunto
@@ -68,7 +80,11 @@ class Paises{
       
 	class iterator{
 	private:
+<<<<<<< HEAD
 	    map<Punto,Pais>::iterator p;
+=======
+	    unordered_map<pair<double,double>,Pais>::iterator p;
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 	public:
 	    iterator(){}
 		bool operator == (const iterator &i){return p == i.p;}  
@@ -78,12 +94,21 @@ class Paises{
 			return *this;
 		}
 
+<<<<<<< HEAD
 		
+=======
+		/*
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 		iterator& operator--(){
 			--p;
 			return *this;
 		}
+<<<<<<< HEAD
 		
+=======
+		*/
+
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 		const Pais & operator*()const{
 			return p->second;
 		}
@@ -94,7 +119,11 @@ class Paises{
 
 	class const_iterator{
 	private:
+<<<<<<< HEAD
 	    map<Punto,Pais>::const_iterator p;
+=======
+	    unordered_map<pair<double,double>,Pais>::const_iterator p;
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 	public:
 		const_iterator(){}
 		bool operator == (const const_iterator &i){return p == i.p;}
@@ -104,10 +133,18 @@ class Paises{
 			return *this;		
 		}
 		
+<<<<<<< HEAD
+=======
+		/*
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 		const_iterator & operator--(){
 			--p;
 			return *this;
 		}
+<<<<<<< HEAD
+=======
+		*/
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 
 		const Pais & operator*()const{
 			return p->second;
@@ -117,6 +154,18 @@ class Paises{
 	   
 	};
 
+<<<<<<< HEAD
+=======
+
+	/**
+	 * @brief Función begin
+	 * @return iterador de Paises apuntando 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+>>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 	iterator begin();
 	const_iterator begin()const;
 	iterator end();
