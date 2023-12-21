@@ -2,20 +2,10 @@
 #include <string>
 #include <list>
 #include <iostream>
-<<<<<<< HEAD
-=======
-#include "Punto.h"
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 #include <cmath>
 
 using namespace std;
 
-<<<<<<< HEAD
-=======
-
-Ruta::Ruta(){}
-
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 void Ruta::Insertar (const Punto & n){
 
     puntos.push_back(n);
