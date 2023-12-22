@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['getbandera_0',['GetBandera',['../classPais.html#a0ba2a78d564f6ea016e88326b37d6ae3',1,'Pais']]],
-  ['getlatitud_1',['GetLatitud',['../classPunto.html#a5ba00c282dafe9222de6ca6877d4607e',1,'Punto']]],
-  ['getlongitud_2',['GetLongitud',['../classPunto.html#ac8debe70768da11c75571aad69012a17',1,'Punto']]],
-  ['getpais_3',['GetPais',['../classPais.html#aff8c3008945f2dae8d360c700f796243',1,'Pais']]],
-  ['getpunto_4',['GetPunto',['../classPais.html#ab0f1ede55db35d15670a1c4210fd013d',1,'Pais']]]
+  ['end_0',['end',['../classAlmacen__Rutas.html#a868ae6c36ada18d6f32493910b752081',1,'Almacen_Rutas::end()'],['../classAlmacen__Rutas.html#ab8788e976c5d2c92852512558369684a',1,'Almacen_Rutas::end() const'],['../classPaises.html#a70932ea210150a67216f52a2857711a2',1,'Paises::end()'],['../classPaises.html#a41c91ef3f0637c6d2b35d580ea876457',1,'Paises::end() const'],['../classRuta.html#a6998702e19f9289ef5a40c7b353c1e9c',1,'Ruta::end()'],['../classRuta.html#a3401f7a84d25b0b2250b6a4e8376f773',1,'Ruta::end() const']]],
+  ['escribirimagenpgm_1',['EscribirImagenPGM',['../imagenES_8h.html#abf2397dda9f7cde383655b0a081b7c93',1,'EscribirImagenPGM(const char nombre[], const unsigned char datos[], int f, int c):&#160;imagenES.cpp'],['../imagenES_8cpp.html#a4efdf8ab38ebe2538e2400e4b22ce51a',1,'EscribirImagenPGM(const char nombre[], const unsigned char datos[], int filas, int columnas):&#160;imagenES.cpp']]],
+  ['escribirimagenppm_2',['EscribirImagenPPM',['../imagenES_8h.html#a420de11a71f00b579f392e94f0d2498e',1,'EscribirImagenPPM(const char nombre[], const unsigned char datos[], int f, int c):&#160;imagenES.cpp'],['../imagenES_8cpp.html#ab5fce69f72746a026ad1db2ba1856b99',1,'EscribirImagenPPM(const char nombre[], const unsigned char datos[], int filas, int columnas):&#160;imagenES.cpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['borrar_0',['Borrar',['../classPaises.html#ab65dee96356d179675990ceb13c1955c',1,'Paises']]]
+  ['almacen_5frutas_0',['Almacen_Rutas',['../classAlmacen__Rutas.html#a9e069a59069c82b2e66fce091356f512',1,'Almacen_Rutas']]]
 ];

@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['pais_0',['Pais',['../classPais.html',1,'Pais'],['../classPais.html#a16af2b45eb9d07e7292a58556edc9371',1,'Pais::Pais()']]],
-  ['pais_2eh_1',['Pais.h',['../Pais_8h.html',1,'']]],
-  ['paises_2',['Paises',['../classPaises.html',1,'Paises'],['../classPaises.html#a3e50b7718e3e147dc36e2151b93af999',1,'Paises::Paises()']]],
-  ['paises_2eh_3',['Paises.h',['../Paises_8h.html',1,'']]],
-  ['pixel_4',['Pixel',['../structPixel.html',1,'']]],
-  ['punto_5',['Punto',['../classPunto.html',1,'Punto'],['../classPunto.html#a4b8b70b933ff13493ee5ddb3c8532c10',1,'Punto::Punto()'],['../classPunto.html#aacde835b2088ff88aa29f392c0797c1f',1,'Punto::Punto(double l, double L)']]],
-  ['punto_2eh_6',['Punto.h',['../Punto_8h.html',1,'']]]
+  ['operator_3c_0',['operator&lt;',['../classPais.html#a44adc983241faeaa4838ec878db5b314',1,'Pais::operator&lt;()'],['../classPunto.html#a5583f564dab87d0d31c7facbd767fbfb',1,'Punto::operator&lt;()'],['../classRuta.html#aec7daff1c5db8cd2bf007d0ed9b7483a',1,'Ruta::operator&lt;()']]],
+  ['operator_3c_3c_1',['operator&lt;&lt;',['../classPais.html#adbbc2eb87b7f26c0e98cd72c8009d3a5',1,'Pais::operator&lt;&lt;'],['../classPaises.html#a74e0ec1e4fcf083fda3d87d42a44456a',1,'Paises::operator&lt;&lt;'],['../classPunto.html#a623b7f142ada3f699100ba34423dd02c',1,'Punto::operator&lt;&lt;'],['../classRuta.html#a618060d0ea75ca70526b9e42624a7187',1,'Ruta::operator&lt;&lt;']]],
+  ['operator_3d_3d_2',['operator==',['../classPais.html#a3588e3a03eb40933a5eb576dbac0dfc5',1,'Pais::operator==(const Pais &amp;P) const'],['../classPais.html#af55cc0a93e1a807e1291265d2c9b986a',1,'Pais::operator==(const Punto &amp;P) const'],['../classPunto.html#a28092d53569dd766695ba90c71763df2',1,'Punto::operator==()'],['../classRuta.html#abf5cdf4f168bd217c8f5d1476d66dbb7',1,'Ruta::operator==()']]],
+  ['operator_3e_3e_3',['operator&gt;&gt;',['../classPais.html#a22085df96a900009e27563f8a8526c3e',1,'Pais::operator&gt;&gt;'],['../classPaises.html#aacc77e1f7ca6283627c89cbe15498f0e',1,'Paises::operator&gt;&gt;'],['../classPunto.html#aeab6272950951c41d6b36b2f781a3187',1,'Punto::operator&gt;&gt;'],['../classRuta.html#a020474dc2c13ca02358bc9fddd90a8ab',1,'Ruta::operator&gt;&gt;']]]
 ];

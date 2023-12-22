@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pais_0',['Pais',['../classPais.html#a16af2b45eb9d07e7292a58556edc9371',1,'Pais']]],
-  ['paises_1',['Paises',['../classPaises.html#a3e50b7718e3e147dc36e2151b93af999',1,'Paises']]],
-  ['punto_2',['Punto',['../classPunto.html#a4b8b70b933ff13493ee5ddb3c8532c10',1,'Punto::Punto()'],['../classPunto.html#aacde835b2088ff88aa29f392c0797c1f',1,'Punto::Punto(double l, double L)']]]
+  ['leerimagenpgm_0',['LeerImagenPGM',['../imagenES_8h.html#a7989c5e096410d5bb9ac230b53ab1304',1,'LeerImagenPGM(const char nombre[], int &amp;filas, int &amp;columnas, unsigned char buffer[]):&#160;imagenES.cpp'],['../imagenES_8cpp.html#a7989c5e096410d5bb9ac230b53ab1304',1,'LeerImagenPGM(const char nombre[], int &amp;filas, int &amp;columnas, unsigned char buffer[]):&#160;imagenES.cpp']]],
+  ['leerimagenppm_1',['LeerImagenPPM',['../imagenES_8h.html#a4a6f0611d8fe9496ad0f3525e29684de',1,'LeerImagenPPM(const char nombre[], int &amp;filas, int &amp;columnas, unsigned char buffer[]):&#160;imagenES.cpp'],['../imagenES_8cpp.html#a4a6f0611d8fe9496ad0f3525e29684de',1,'LeerImagenPPM(const char nombre[], int &amp;filas, int &amp;columnas, unsigned char buffer[]):&#160;imagenES.cpp']]],
+  ['leertipoimagen_2',['LeerTipoImagen',['../imagenES_8h.html#a4ba3a13a2951f968a61b3d60b06c8784',1,'LeerTipoImagen(const char nombre[], int &amp;filas, int &amp;columnas):&#160;imagenES.cpp'],['../imagenES_8cpp.html#a4ba3a13a2951f968a61b3d60b06c8784',1,'LeerTipoImagen(const char nombre[], int &amp;filas, int &amp;columnas):&#160;imagenES.cpp']]]
 ];

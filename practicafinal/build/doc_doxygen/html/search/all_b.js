@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setlatitud_0',['SetLatitud',['../classPunto.html#a6d31326b1195b81481432ee651be2b0e',1,'Punto']]],
-  ['setlongitud_1',['SetLongitud',['../classPunto.html#a2f6b2391c4e82e540186298e92e9fd1b',1,'Punto']]]
+  ['ruta_0',['Ruta',['../classRuta.html',1,'Ruta'],['../classRuta.html#a1020b0a24a1212f30f4f74284bec3597',1,'Ruta::Ruta()']]],
+  ['ruta_2eh_1',['Ruta.h',['../Ruta_8h.html',1,'']]]
 ];

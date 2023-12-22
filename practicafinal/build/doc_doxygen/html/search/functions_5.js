@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operator_3c_0',['operator&lt;',['../classPais.html#a44adc983241faeaa4838ec878db5b314',1,'Pais::operator&lt;()'],['../classPunto.html#a5583f564dab87d0d31c7facbd767fbfb',1,'Punto::operator&lt;()']]],
-  ['operator_3d_3d_1',['operator==',['../classPais.html#a3588e3a03eb40933a5eb576dbac0dfc5',1,'Pais::operator==(const Pais &amp;P) const'],['../classPais.html#af55cc0a93e1a807e1291265d2c9b986a',1,'Pais::operator==(const Punto &amp;P) const'],['../classPunto.html#a28092d53569dd766695ba90c71763df2',1,'Punto::operator==()']]]
+  ['insertar_0',['Insertar',['../classAlmacen__Rutas.html#ad7825f70ab10f1c998650994385d27f7',1,'Almacen_Rutas::Insertar()'],['../classPaises.html#af8696fe195de53bf173bc40b314599f3',1,'Paises::Insertar()'],['../classRuta.html#aa510f8db2d5d0ae7e41861d2ca2108ef',1,'Ruta::Insertar()']]]
 ];

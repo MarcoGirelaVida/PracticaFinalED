@@ -123,12 +123,52 @@ class Paises{
 	   
 	};
 
+
+	/**
+	 * @brief Inicio de la colección de Paises 
+	 * @post La colección no se ve modificada
+	 * @return Iterador que apunta al primer pais de la colección
+	 */
 	iterator begin();
+
+	/**
+	 * @brief Inicio de la colección de Paises 
+	 * @post La colección no se ve modificada
+	 * @return Const_iterator que apunta al primer pais de la colección
+	 */
 	const_iterator begin()const;
+	/**
+	 * @brief Final de la colección de Paises 
+	 * @post La colección no se ve modificada
+	 * @return Iterador que apunta al ultimo pais de la colección
+	 */
 	iterator end();
+
+	/**
+	 * @brief Final de la colección de Paises 
+	 * @post La colección no se ve modificada
+	 * @return Const_iterator que apunta al ultimo pais de la colección
+	 */
 	const_iterator end()const;
 
+
+
+	/**
+	 * @brief Búsqueda de un Pais en la colección
+	 * @param p Pais a buscar en la colección
+	 * @pre p es un Pais inicializado correctamente
+	 * @post La colección no se ve modificada
+	 * @return iterador que apunta al Pais encontrado
+	 */
 	iterator find(const Pais &p);
+
+	/**
+	 * @brief Búsqueda de un Pais en la colección
+	 * @param p Punto del pais a buscar en la colección
+	 * @pre p es un Punto inicializado correctamente
+	 * @post La coleccion no se ve modificada
+	 * @return iterador que apunta al Pais encontrado
+	 */
 	iterator find(const Punto &p);
 
     /**
