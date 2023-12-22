@@ -88,6 +88,6 @@ int main(int argc, char * argv[]){
   double angulo=atof(argv[2]);
   angulo = angulo*(M_PI)/180;
   Imagen Iout=Rota(I,angulo);
-  Iout.EscribirImagen(argv[3]);
+  Iout.EscribirImagen(argv[3],true);
   
 }  

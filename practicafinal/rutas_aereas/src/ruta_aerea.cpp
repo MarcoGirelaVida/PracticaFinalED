@@ -11,21 +11,6 @@
 using namespace std;
 
 
-void Pintar(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindisf,int mindisc){
-
-
-    
-
-
-
-
-}
-
-
-
-
-
-
 int main(int argc, char * argv[]){
   if (argc!=7){
       cout<<"Los parametros son:"<<endl;
@@ -65,7 +50,7 @@ int main(int argc, char * argv[]){
 
   // escribimos la imagen
 
-  RutaPintada.EscribirImagen("Mapa_prueba.ppm");
+  RutaPintada.EscribirImagen("Mapa_prueba.ppm", false);
 
   return 0;
 

@@ -10,7 +10,8 @@
 /**
  * @brief T.D.A Pais
  * 
- * Una instancia del tipo de dato Abstracto Pais nos permite almacenar datos sobre un Pais en un único dato
+ * Una instancia del tipo de dato Abstracto Pais nos permite almacenar 
+ * datos sobre un Pais en un único dato
  * 
  * Estos datos son punto geográfico, nombre y bandera.
  * 

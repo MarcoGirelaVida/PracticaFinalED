@@ -32,6 +32,6 @@ int main(int argc, char * argv[]){
   
     
   I.PutImagen(i,j,Ip,tp);
-  I.EscribirImagen(argv[4]);
+  I.EscribirImagen(argv[4], true);
   
 }  

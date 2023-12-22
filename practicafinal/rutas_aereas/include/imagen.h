@@ -35,7 +35,7 @@ class Imagen{
    
    const Pixel & operator ()(int i,int j)const;
    
-   void EscribirImagen(const char * nombre);
+   void EscribirImagen(const char * nombre, bool getMascara);
    
    void LeerImagen (const char *nombre,const string &nombremascara="");
    void LimpiarTransp();

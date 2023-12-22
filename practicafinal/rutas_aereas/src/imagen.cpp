@@ -113,7 +113,7 @@ using namespace std;
 
   /***********************************************/
 
-  void Imagen::EscribirImagen(const char * nombre){
+  void Imagen::EscribirImagen(const char * nombre, bool getMascara){
         unsigned char * aux = new unsigned char [nf*nc*3];
         unsigned char * m = new unsigned char [nf*nc];
         
@@ -133,20 +133,23 @@ using namespace std;
           cerr<<"Ha habido un problema en la escritura de "<<nombre<<endl;
         }	  
         delete[]aux;
-        string n_aux = "mascara_";
-        n_aux =n_aux+nombre;
-        std::size_t found =n_aux.find(".ppm");
-        if (found!=std::string::npos){
-          n_aux =n_aux.substr(0,found);
-        }
-        n_aux =n_aux+".pgm";
 
-        
-        if (!EscribirImagenPGM (n_aux.c_str(), m,nf,nc)){
-          cerr<<"Ha habido un problema en la escritura de "<<n_aux<<endl;
-        }	    
-        delete []m;
-    
+        if(getMascara){
+          string n_aux = "mascara_";
+          n_aux =n_aux+nombre;
+          std::size_t found =n_aux.find(".ppm");
+          if (found!=std::string::npos){
+            n_aux =n_aux.substr(0,found);
+          }
+          n_aux =n_aux+".pgm";
+
+          
+          if (!EscribirImagenPGM (n_aux.c_str(), m,nf,nc)){
+            cerr<<"Ha habido un problema en la escritura de "<<n_aux<<endl;
+          }	    
+          delete []m;
+        }
+      
   }  
   /*********************************/
 void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
@@ -308,16 +311,11 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
 	      Iout(rows,cols)=Io(old_row,old_col);
               
 	   }
-<<<<<<< HEAD
 	   else{
 	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;
        Iout(rows,cols).transp=0;
      }
        
-=======
-	   else
-	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;
->>>>>>> 5bae131a539d3d157aaa1d5f80d687cb53872727
 	}
     }
     *this = Iout;

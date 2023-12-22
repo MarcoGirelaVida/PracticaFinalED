@@ -13,7 +13,7 @@ class Almacen_Rutas{
     private:
        map<string,Ruta> rutas;
     public:
-        Almacen_Rutas();
+        Almacen_Rutas(){};
         void Insertar(const Ruta & R);
         void Borrar(const Ruta & R);
         Ruta GetRuta(const string & a);

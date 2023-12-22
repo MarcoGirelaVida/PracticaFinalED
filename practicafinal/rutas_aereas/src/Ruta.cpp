@@ -66,7 +66,6 @@ void Ruta::PintarAviones(int f1,int f2,int c1,int c2,Imagen &I, const Imagen &av
         
         I.PutImagen(f1,c1,Irota);//pensar si debe ser opaco o blending
 	
-
     }
      
 }  
@@ -95,7 +94,7 @@ Imagen Ruta::PintarRuta(const Imagen & mapa, Paises & paises, const string FlagP
 
         Imagen im_pais_1, im_pais_2, im_avion;
         im_pais_1.LeerImagen((FlagPath + '/' + pais1.GetBandera()).c_str());
-        im_pais_1.LeerImagen((FlagPath + '/' + pais2.GetBandera()).c_str());
+        im_pais_2.LeerImagen((FlagPath + '/' + pais2.GetBandera()).c_str());
 
         pair<double,double> pos1_mapa, pos2_mapa;
         pos1_mapa.first = (mapa.num_filas()/180.0)*(90-(*it1).GetLatitud());
@@ -157,7 +156,7 @@ Ruta::iterator Ruta::find(const Punto &p){
     
     iterator it;
     list<Punto>::iterator i;
-    for (i=puntos.begin(); i!=puntos.end() && !((*i) == p); ++i);
+    for (i=puntos.begin(); i!=puntos.end() && !((*i) == p); ++i)
         it.p=i;
     return it;
 }

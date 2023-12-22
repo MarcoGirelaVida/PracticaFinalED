@@ -26,6 +26,11 @@ using namespace std;
  * 
  * TIPO DE REPRESENTACIÓN:
  * 
+ * Colección de claves con objetos asociados en los que las claves son
+ * objetos de la clase Punto y los objetos asociados son objetos de la
+ * clase Pais. La relación entre clave y objeto es la siguiente:
+ * 
+ * Punto(clave) = Pais.getPunto()
  * 
  * 
  * 
@@ -59,10 +64,10 @@ class Paises{
 
 
 	/**
-	 * @brief Borrado de un pais en el conjunto
+	 * @brief Borrado de un pais del conjunto
 	 * @param P Pais que se va a borrar del conjunto de paises
 	 * @pre p es un Pais inicializado correctamente
-	 * @post EL pais no se modifica. Se elimina el Pais del conjunto, modificandolo
+	 * @post El pais no se modifica. Se elimina el Pais del conjunto, modificandolo
 	 */
     void Borrar(const Pais &P);
       
@@ -97,6 +102,7 @@ class Paises{
 	    map<Punto,Pais>::const_iterator p;
 	public:
 		const_iterator(){}
+		
 		bool operator == (const const_iterator &i){return p == i.p;}
 		bool operator != (const const_iterator &i){return p != i.p;}
 		const_iterator & operator++(){
@@ -125,7 +131,23 @@ class Paises{
 	iterator find(const Pais &p);
 	iterator find(const Punto &p);
 
+    /**
+     * @brief Sobrecarga del flujo de entrada
+     * @param is flujo de entrada a leer
+     * @param R Objeto de la clase Países donde se almacenarán los Paises leidos de @p is  
+     * @pre @p R es un conjunto vacío (o no) de Paises inicializado correctamente
+     * @post Se rellenan los datos del conjunto de Paises @p R con los Paises leidos del flujo
+     * @p is
+     */
 	friend istream & operator>>(istream & is, Paises & R);
+
+	/**
+     * @brief Sobrecarga del flujo de salida
+     * @param is flujo de salida donde se escribirán datos
+     * @param R Objeto de la clase Paises de donde se extraerán los datos a almacenar en @p is  
+     * @pre @p R es un conjunto de Países inicializado correctamente
+     * @post Se leen los datos del conjunto de Paises @p R y se escriben en el flujo @p os
+     */
 	friend ostream & operator<<(ostream & os, const Paises &R);
 };
 
