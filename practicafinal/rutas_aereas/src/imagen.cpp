@@ -24,10 +24,10 @@ using namespace std;
     for (int i=0;i<nf;i++){
       data[i]=new Pixel[nc];
       for (int j=0;j<nc;j++){
-        data[i][j].r=I.data[i][j].r;
-        data[i][j].g=I.data[i][j].g;
-        data[i][j].b=I.data[i][j].b;
-        data[i][j].transp=I.data[i][j].transp;
+        (*this)(i,j).r=I(i,j).r;
+        (*this)(i,j).g=I(i,j).g;
+        (*this)(i,j).b=I(i,j).b;
+        (*this)(i,j).transp=I(i,j).transp;
       }
     }
   }
@@ -51,10 +51,10 @@ using namespace std;
     for (int i=0;i<nf;i++){
       data[i]=new Pixel[nc];
       for (int j=0;j<nc;j++){
-        data[i][j].r=255;
-        data[i][j].g=255;
-        data[i][j].b=255;
-        data[i][j].transp=255;
+        (*this)(i,j).r=255;
+        (*this)(i,j).g=255;
+        (*this)(i,j).b=255;
+        (*this)(i,j).transp=255;
       }
     }  
   }
@@ -122,10 +122,10 @@ using namespace std;
           int posi = i /(nc*3);
           int posj = (i%(nc*3))/3;
           
-          aux[i]=data[posi][posj].r;
-          aux[i+1]=data[posi][posj].g;
-          aux[i+2]=data[posi][posj].b;
-          m[i/3]=data[posi][posj].transp;
+          aux[i]=(*this)(posi,posj).r;
+          aux[i+1]=(*this)(posi,posj).g;
+          aux[i+2]=(*this)(posi,posj).b;
+          m[i/3]=(*this)(posi,posj).transp;
         
         }    
     
@@ -176,13 +176,13 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
         int posi = i /(c*3);
         int posj = (i%(c*3))/3;
       //   cout<<posi<<" " <<posj<<endl;
-          I.data[posi][posj].r=aux[i];
-          I.data[posi][posj].g=aux[i+1];
-          I.data[posi][posj].b=aux[i+2];
+          I(posi,posj).r=aux[i];
+          I(posi,posj).g=aux[i+1];
+          I(posi,posj).b=aux[i+2];
           if (aux_mask!=0)
-            I.data[posi][posj].transp=aux_mask[i/3];
+            I(posi,posj).transp=aux_mask[i/3];
           else  
-            I.data[posi][posj].transp=255;
+            I(posi,posj).transp=255;
 	    }
  
       *this = I;
@@ -218,13 +218,13 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
       for (int i=0;i<I.nf;i++)
         for (int j=0;j<I.nc;j++)
           if (i+posi>=0 && i+posi<nf && j+posj>=0 && j+posj<nc){
-            if (I.data[i][j].transp!=0){
+            if (I(i,j).transp!=0){
               if (tippegado==OPACO)
-                data[i+posi][j+posj]=I.data[i][j];
+                (*this)(i+posi,j+posj)=I(i,j);
               else{
-                data[i+posi][j+posj].r=(data[i+posi][j+posj].r+I.data[i][j].r)/2;
-                data[i+posi][j+posj].g=(data[i+posi][j+posj].r+I.data[i][j].g)/2;
-                data[i+posi][j+posj].b=(data[i+posi][j+posj].r+I.data[i][j].b)/2;
+                (*this)(i+posi,j+posj).r=((*this)(i+posi,j+posj).r+I(i,j).r)/2;
+                (*this)(i+posi,j+posj).g=((*this)(i+posi,j+posj).r+I(i,j).g)/2;
+                (*this)(i+posi,j+posj).b=((*this)(i+posi,j+posj).r+I(i,j).b)/2;
               }  
             }  
           }	
@@ -239,10 +239,10 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
 
   for (int i=posi; i<dimi; i++){
     for (int j=posj; j<dimj; j++){
-      aux.data[i-posi][j-posj].r = data[i][j].r;
-      aux.data[i-posi][j-posj].g = data[i][j].g;
-      aux.data[i-posi][j-posj].b = data[i][j].b;
-      aux.data[i-posi][j-posj].transp = data[i][j].transp;
+      aux(i-posi,j-posj).r = (*this)(i,j).r;
+      aux(i-posi,j-posj).g = (*this)(i,j).g;
+      aux(i-posi,j-posj).b = (*this)(i,j).b;
+      aux(i-posi,j-posj).transp = (*this)(i,j).transp;
     }
   }
 
