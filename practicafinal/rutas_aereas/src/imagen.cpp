@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cassert>
 #include <cmath>
+#include <cmath>
 using namespace std;
 
 
@@ -15,13 +16,14 @@ using namespace std;
   }
 
 
-  void Imagen::Copiar(const Imagen & I){
-
+  void Imagen::Copiar(const Imagen & I)
+  {
     nf = I.nf;
     nc = I.nc;
 
     data = new Pixel*[nf];
-    for (int i=0;i<nf;i++){
+    for (size_t i = 0; i < nf; i++)
+    {
       data[i]=new Pixel[nc];
       for (int j=0;j<nc;j++){
         (*this)(i,j).r=I(i,j).r;
@@ -32,23 +34,24 @@ using namespace std;
     }
   }
 
-  Imagen::Imagen(){
-
+  Imagen::Imagen()
+  {
     nf = 0;
     nc = 0;
     data = nullptr;
-
   }
 
 
 
 
 
-  Imagen::Imagen(int f,int c){
+  Imagen::Imagen(int f,int c)
+  {
     nf = f;
     nc = c;
     data = new Pixel*[nf];
-    for (int i=0;i<nf;i++){
+    for (size_t i = 0; i < nf; i++)
+    {
       data[i]=new Pixel[nc];
       for (int j=0;j<nc;j++){
         (*this)(i,j).r=255;
@@ -60,8 +63,8 @@ using namespace std;
   }
 
 
-  Imagen::Imagen(const Imagen & I){
-
+  Imagen::Imagen(const Imagen & I)
+  {
     // Constructor de copia
 
     //Copio filas y columnas
@@ -71,18 +74,16 @@ using namespace std;
 
     // Reservo memoria y copio los datos
     data = new Pixel*[nf];
-      for (int i=0;i<nf;i++){
-        data[i]=new Pixel[nc];
-    }
+      for (size_t i = 0; i < nf; i++)
+        data[i] = new Pixel[nc];
 
     Copiar(I);
-
   }
 
 
 
- Imagen & Imagen::operator=(const Imagen & I){
-
+ Imagen & Imagen::operator=(const Imagen & I)
+ {
       if (this != &I) { // Evita la autoasignación
           // Libero la memoria actual
           Borrar();
@@ -91,23 +92,25 @@ using namespace std;
       return *this; // Permite encadenar asignaciones (a = b = c)
   }
 
-  Imagen::~Imagen(){
-
+  Imagen::~Imagen()
+  {
     for (size_t i = 0; i < nf; i++)
       delete[] data[i];
 
     delete[] data;
-
   }
+
   /**********************************************/
-  Pixel & Imagen::operator()(int i,int j){
-    assert(i>=0 && i<nf && j>=0 && j<nc);
+  Pixel & Imagen::operator()(int i,int j)
+  {
+    assert(i >= 0 && i < nf && j >= 0 && j < nc);
     return data[i][j];
   }
 
   /**********************************************/
-  const Pixel & Imagen::operator()(int i,int j)const{
-    assert(i>=0 && i<nf && j>=0 && j<nc);
+  const Pixel & Imagen::operator()(int i,int j) const
+  {
+    assert(i >= 0 && i < nf && j >= 0 && j < nc);
     return data[i][j];
   }
 
@@ -117,10 +120,11 @@ using namespace std;
         unsigned char * aux = new unsigned char [nf*nc*3];
         unsigned char * m = new unsigned char [nf*nc];
         
-        int total = nf*nc*3;
-        for (int i=0;i<total;i+=3){
-          int posi = i /(nc*3);
-          int posj = (i%(nc*3))/3;
+        int total = nf * nc * 3;
+        for (size_t i = 0; i < total; i += 3)
+        {
+          int posi = i / (nc * 3);
+          int posj = (i % (nc * 3)) / 3;
           
           aux[i]=(*this)(posi,posj).r;
           aux[i+1]=(*this)(posi,posj).g;
@@ -129,7 +133,7 @@ using namespace std;
         
         }    
     
-        if (!EscribirImagenPPM (nombre, aux,nf,nc)){
+        if (!EscribirImagenPPM (nombre, aux, nf, nc))
           cerr<<"Ha habido un problema en la escritura de "<<nombre<<endl;
         }	  
         delete[]aux;
@@ -152,29 +156,31 @@ using namespace std;
       
   }  
   /*********************************/
-void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
-      int f,c;
+void Imagen::LeerImagen(const char * nombre,const string &nombremascara)
+{
+      int f, c;
       unsigned char * aux,*aux_mask ;
       
       LeerTipoImagen(nombre, f, c);
-      aux = new unsigned char [f*c*3];
-      LeerImagenPPM (nombre, f,c,aux);
-      if (nombremascara!=""){
+      aux = new unsigned char [f * c * 3];
+      LeerImagenPPM (nombre, f, c, aux);
+      if (nombremascara != "")
+      {
         int fm,cm;
         LeerTipoImagen(nombremascara.c_str(), fm, cm);
-        aux_mask = new unsigned char [fm*cm];
-        LeerImagenPGM(nombremascara.c_str(), fm,cm,aux_mask);
+        aux_mask = new unsigned char [fm * cm];
+        LeerImagenPGM(nombremascara.c_str(), fm, cm, aux_mask);
       }
-      else{
+      else
 	      aux_mask=0;
-      }	
       
       
       Imagen I(f,c);
       int total = f*c*3;
-      for (int i=0;i<total;i+=3){
-        int posi = i /(c*3);
-        int posj = (i%(c*3))/3;
+      for (size_t i = 0; i < total; i += 3)
+      {
+        int posi = i / (c * 3);
+        int posj = (i % (c * 3)) / 3;
       //   cout<<posi<<" " <<posj<<endl;
           I(posi,posj).r=aux[i];
           I(posi,posj).g=aux[i+1];
@@ -187,7 +193,8 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
  
       *this = I;
 
-      if (aux_mask!=0) delete[]aux_mask;
+      if (aux_mask != 0)
+        delete[] aux_mask;
       delete []aux;
 
       
