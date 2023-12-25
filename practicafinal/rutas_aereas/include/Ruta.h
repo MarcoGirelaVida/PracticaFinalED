@@ -36,9 +36,11 @@
  *  representa el recorrido de la ruta en un mapa y su identificador
  *  respectivamente.
  * 
- *  FUNCION DE ABSTRACCIÓN:
+ * FUNCION DE ABSTRACCIÓN:
+ * f(puntos, string) -> Ruta con código [string] que pasa por los puntos [puntos]
  * 
- * 
+ * INVARIANTE DE REPRESENTACIÓN:
+ * Ir: {string puede ser casteado a un unsigned int, los puntos sucesivos son distintos entre sí (no puedo ir de A a A)}
  */
 class Ruta{
 
@@ -143,22 +145,57 @@ class Ruta{
          */
         bool operator<(const Ruta &R)const;
 
+        /**
+         * @brief Clase iterator n-constante
+         * Para iterar sobre los destinos de una ruta.
+         *
+         * Proporciona funcionalidades para iterar, acceder y modificar los puntos de una ruta.
+         */
         class iterator{
             private:
                 list<Punto>::iterator p;
             public:
+                /**
+                 * @brief Constructor por defecto para el iterador.
+                 */
                 iterator(){}
-                bool operator == (const iterator &i){return p == i.p;}  
+
+                /**
+                 * @brief Operador de comparación de igualdad para iteradores.
+                 * @param i Iterador con el que comparar.
+                 * @return Verdadero si los iteradores son iguales, falso en caso contrario.
+                 */
+                bool operator == (const iterator &i){return p == i.p;}
+
+                /**
+                 * @brief Operador de comparación de desigualdad para iteradores.
+                 * @param i Iterador con el que comparar.
+                 * @return Verdadero si los iteradores no son iguales, falso en caso contrario.
+                 */ 
                 bool operator != (const iterator &i){return p != i.p;}
+
+                /**
+                 * @brief Operador de incremento prefixado para el iterador.
+                 * @return Referencia al iterador después de incrementarlo.
+                 */
                 iterator & operator++(){
                     ++p;
                     return *this;
                 }
+
+                /**
+                 * @brief Operador de decremento prefixado para el iterador.
+                 * @return Referencia al iterador después de decrementarlo.
+                 */
                 iterator& operator--(){
                     --p;
                     return *this;
                 }
 
+                /**
+                 * @brief Operador de desreferencia para el iterador, proporcionando acceso a la ruta actual.
+                 * @return Referencia a la ruta apuntada por el iterador.
+                 */
                 Punto & operator*(){
                     return *p;
                 }
@@ -167,17 +204,48 @@ class Ruta{
             friend class const_iterator;
 	    }; 
 
+        /**
+         * @brief Clase iterator constante
+         * Para iterar sobre los destinos de una ruta.
+         *
+         * Proporciona funcionalidades para iterar, acceder y modificar los puntos de una ruta.
+         */
         class const_iterator{
             private:
                 list<Punto>::const_iterator p;
             public:
+                /**
+                 * @brief Constructor por defecto para el iterador.
+                 */
                 const_iterator(){}
+
+                /**
+                 * @brief Operador de comparación de igualdad para iteradores.
+                 * @param i Iterador con el que comparar.
+                 * @return Verdadero si los iteradores son iguales, falso en caso contrario.
+                 */
                 bool operator == (const const_iterator &i){return p == i.p;}
+
+                /**
+                 * @brief Operador de comparación de desigualdad para iteradores.
+                 * @param i Iterador con el que comparar.
+                 * @return Verdadero si los iteradores no son iguales, falso en caso contrario.
+                 */
                 bool operator != (const const_iterator &i){return p != i.p;}
+
+                /**
+                 * @brief Operador de incremento prefixado para el iterador.
+                 * @return Referencia al iterador después de incrementarlo.
+                 */
                 const_iterator & operator++(){
                     ++p;
                     return *this;		
                 }
+
+                /**
+                 * @brief Operador de decremento prefixado para el iterador.
+                 * @return Referencia al iterador después de decrementarlo.
+                 */
                 const_iterator & operator--(){
                     --p;
                     return *this;
@@ -227,10 +295,6 @@ class Ruta{
          * @return iterador que apunta al Punto encontrado
          */
         iterator find(const Punto &p);
-
-
-
-
 
         /**
          * @brief Sobrecarga del flujo de entrada

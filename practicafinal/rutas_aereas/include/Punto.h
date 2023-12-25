@@ -31,7 +31,10 @@ using namespace std;
  *  la latitud y la longitud de un punto geográfico.
  * 
  * FUNCION DE ABSTRACCION
- *  
+ *  f(int1, int2) -> Punto ubicado en latitud [int1] y longitud [int2]
+ * 
+ * INVARIANTE DE REPRESENTACIÓN
+ * Ir: {-90 < int1 < 90, -180 < in2 < 180}
  */
 
 class Punto{

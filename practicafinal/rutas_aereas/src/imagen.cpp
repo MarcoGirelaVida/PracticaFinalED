@@ -135,7 +135,6 @@ using namespace std;
     
         if (!EscribirImagenPPM (nombre, aux, nf, nc))
           cerr<<"Ha habido un problema en la escritura de "<<nombre<<endl;
-        }	  
         delete[]aux;
 
         if(getMascara){

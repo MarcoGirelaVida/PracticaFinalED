@@ -1,2 +1,0 @@
-/usr/bin/ar qc lib/libpaises.a CMakeFiles/paises.dir/rutas_aereas/src/Pais.cpp.o CMakeFiles/paises.dir/rutas_aereas/src/Paises.cpp.o CMakeFiles/paises.dir/rutas_aereas/src/Punto.cpp.o CMakeFiles/paises.dir/rutas_aereas/src/Ruta.cpp.o CMakeFiles/paises.dir/rutas_aereas/src/Almacen_Rutas.cpp.o
-/usr/bin/ranlib lib/libpaises.a

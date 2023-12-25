@@ -1,5 +1,5 @@
 /**
- * @file image.h
+ * @file imagen.h
  * @brief Cabecera para la clase Image  
  */
 #ifndef _IMAGEN_H_
@@ -159,7 +159,7 @@ class Imagen{
     * @return Devuelve true si la imagen se almacenó con éxito y false en caso contrario.
     * @post La imagen no se modifica.
     */
-    void EscribirImagen(const char * nombre);
+    void EscribirImagen(const char * nombre, bool getMascara);
     
     /**
     * @brief Carga en memoria una imagen de disco .
@@ -169,6 +169,10 @@ class Imagen{
     * @post La imagen previamente almacenada en el objeto que llama a la función se destruye.
     */
     void LeerImagen (const char *nombre,const string &nombremascara="");
+
+    /**
+     * @brief Limpia las transparencias de una imagen
+    */
     void LimpiarTransp();
 
     /**

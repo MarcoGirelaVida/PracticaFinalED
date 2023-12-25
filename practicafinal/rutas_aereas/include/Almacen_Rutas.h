@@ -80,53 +80,129 @@ class Almacen_Rutas{
          */
         Ruta GetRuta(const string & a);
 
-        class iterator{
-            private:
-                map<string,Ruta>::iterator p;
-            public:
-                iterator(){}
-                bool operator == (const iterator &i){return p == i.p;}  
-                bool operator != (const iterator &i){return p != i.p;}
-                iterator & operator++(){
-                    ++p;
-                    return *this;
-                }
+/**
+ * @brief Clase iterator no-constante
+ * Para iterar sobre un almacen de rutas.
+ *
+ * Proporciona funcionalidades para iterar, acceder y modificar las rutas en la colección.
+ */
+    class iterator {
+        private:
+            map<string, Ruta>::iterator p; /**< Iterador apuntando a una ruta específica en la colección */
 
-                iterator & operator--(){
-                    --p;
-                    return *this;
-                }
+        public:
+            /**
+             * @brief Constructor por defecto para el iterador.
+             */
+            iterator() {}
 
-                Ruta & operator*(){
-                    return p->second;
-                }
-                
+            /**
+             * @brief Operador de comparación de igualdad para iteradores.
+             * @param i Iterador con el que comparar.
+             * @return Verdadero si los iteradores son iguales, falso en caso contrario.
+             */
+            bool operator==(const iterator &i) { return p == i.p; }
+
+            /**
+             * @brief Operador de comparación de desigualdad para iteradores.
+             * @param i Iterador con el que comparar.
+             * @return Verdadero si los iteradores no son iguales, falso en caso contrario.
+             */
+            bool operator!=(const iterator &i) { return p != i.p; }
+
+            /**
+             * @brief Operador de incremento prefixado para el iterador.
+             * @return Referencia al iterador después de incrementarlo.
+             */
+            iterator &operator++() {
+                ++p;
+                return *this;
+            }
+
+            /**
+             * @brief Operador de decremento prefixado para el iterador.
+             * @return Referencia al iterador después de decrementarlo.
+             */
+            iterator &operator--() {
+                --p;
+                return *this;
+            }
+
+            /**
+             * @brief Operador de desreferencia para el iterador, proporcionando acceso a la ruta actual.
+             * @return Referencia a la ruta apuntada por el iterador.
+             */
+            Ruta &operator*() {
+                return p->second;
+            }
+
+            /**
+             * @brief Declaración de amistad para permitir que la clase Almacen_Rutas acceda a miembros privados.
+             */
             friend class Almacen_Rutas;
-            friend class const_iterator;
-        };
 
+            /**
+             * @brief Declaración de amistad para permitir que la clase const_iterator acceda a miembros privados.
+             */
+            friend class const_iterator;
+    };
+
+        /**
+         * @brief Clase iterator constante
+         * Para iterar sobre un almacen de rutas.
+         *
+         * Proporciona funcionalidades para iterar, acceder y modificar las rutas en la colección.
+         */
         class const_iterator{
             private:
                 map<string,Ruta>::const_iterator p;
             public:
+                /**
+                 * @brief Constructor por defecto para el iterador.
+                 */
                 const_iterator(){}
+                /**
+                 * @brief Operador de comparación de igualdad para iteradores.
+                 * @param i Iterador con el que comparar.
+                 * @return Verdadero si los iteradores son iguales, falso en caso contrario.
+                 */
                 bool operator == (const const_iterator &i){return p == i.p;}  
+                /**
+                 * @brief Operador de comparación de desigualdad para iteradores.
+                 * @param i Iterador con el que comparar.
+                 * @return Verdadero si los iteradores no son iguales, falso en caso contrario.
+                 */
                 bool operator != (const const_iterator &i){return p != i.p;}
+                /**
+                 * @brief Operador de incremento prefixado para el iterador.
+                 * @return Referencia al iterador después de incrementarlo.
+                 */
                 const_iterator & operator++(){
                     ++p;
                     return *this;
                 }
 
+                /**
+                 * @brief Operador de decremento prefixado para el iterador.
+                 * @return Referencia al iterador después de decrementarlo.
+                 */
                 const_iterator & operator--(){
                     --p;
                     return *this;
                 }
 
+                /**
+                 * @brief Operador de desreferencia para el iterador, proporcionando acceso a la ruta actual.
+                 * @return Referencia a la ruta apuntada por el iterador.
+                 */
                 const Ruta & operator*()const{
-                    return p->second;
+                        return p->second;
                 }
                 
-            friend class Almacen_Rutas;
+        /**
+         * @brief Declaración de amistad para permitir que la clase Almacen_Rutas acceda a miembros privados.
+         */
+        friend class Almacen_Rutas;
         };
 
         /**

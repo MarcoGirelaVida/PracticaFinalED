@@ -13,8 +13,8 @@ Dicha práctica se compone de los siguientes elementos:
 - Una serie de programas que hacen uso de estos TDAs:
   - [pruebapegado](#pruebapegado "Prueba Pegado")
   - [pruebarotacion](#pruebarotacion "Prueba Rotación")
-  - [ruta_aerea](#ruta_aerea "Rutas aereas")
-
+  - [ruta_aerea](#ruta_aerea "Rutas aereas")  
+### Nota: Ruta aerea a veces no funciona la primera (se queda como pillado), si esto ocurre, haga Ctrl+C y vuélvalo a ejecutar.
 # Compilación y ejecución
 
 ## Compilación
@@ -60,7 +60,7 @@ Pega una imagen dada sobre otra
 @param <num_columna> Columna a partir de la que empieza el pegado
 @param <tipo_pegado> Tipo de pegado que se aplicará, 0 si es opaco, 1 si es blending
 
-@image html pruebapegado.png "pruebapegado"
+@image html pruebapegado.jpg "pruebapegado"
 
 ## Prueba rotación {#pruebarotacion}
 
@@ -71,7 +71,7 @@ Rota una imagen dada con el ángulo dado
 @param <angulo> Ángulo con el que se quiere girar la imagen
 @param <path/fichero_resultante.ppm> Fichero donde se desea que se almacene el resultado de la rotación
 
-@image html pruebarotacion.png "pruebarotacion"
+@image html pruebarotacion.jpg "pruebarotacion"
 
 ## Ruta Aerea {#ruta_aerea}
 
@@ -85,7 +85,7 @@ Devuelve una imagen con el diagrama de la ruta aerea proporcionada.
 @param <path/avion.ppm> Imagen del avión que se mostrará en la ruta
 @param <path/mascaraavion.ppm> Máscara de trasparencia que se le aplicará a la imagen del avión
 
-@image html ruta_aerea.png "ruta_aerea"
+@image html ruta_aerea.jpg "ruta_aerea"
 
 # Autores
 Los autores de esta práctica son:

@@ -32,8 +32,11 @@ using namespace std;
  * 
  * Punto(clave) = Pais.getPunto()
  * 
+ * FUNCIÓN DE ABSTRACCIÓN:
+ * f(puntos,paises) -> Conjunto de paises [paises] ubicados en [puntos]
  * 
- * 
+ * INVARIANTE DE REPRESENTACIÓN:
+ * Ir {Punto[i] es el punto donde se encuentra el Pais[i]}
  */
 
 class Paises{
@@ -71,24 +74,56 @@ class Paises{
 	 */
     void Borrar(const Pais &P);
       
+	/**
+	 * @brief Clase iterator no-const.
+	 * Itera sobre los paises que componen un tipo de dato "paises"
+	 * Proporciona funcionalidades para iterar, acceder y modificar las rutas en la colección.
+	 */
 	class iterator{
 	private:
 	    map<Punto,Pais>::iterator p;
 	public:
+        /**
+         * @brief Constructor por defecto para el iterador.
+         */
 	    iterator(){}
-		bool operator == (const iterator &i){return p == i.p;}  
+
+        /**
+         * @brief Operador de comparación de igualdad para iteradores.
+         * @param i Iterador con el que comparar.
+         * @return Verdadero si los iteradores son iguales, falso en caso contrario.
+         */
+		bool operator == (const iterator &i){return p == i.p;}
+
+        /**
+         * @brief Operador de comparación de desigualdad para iteradores.
+         * @param i Iterador con el que comparar.
+         * @return Verdadero si los iteradores no son iguales, falso en caso contrario.
+         */
 		bool operator != (const iterator &i){return p != i.p;}
+
+        /**
+         * @brief Operador de incremento prefixado para el iterador.
+         * @return Referencia al iterador después de incrementarlo.
+         */
 		iterator & operator++(){
 			++p;
 			return *this;
 		}
 
-		
+        /**
+         * @brief Operador de decremento prefixado para el iterador.
+         * @return Referencia al iterador después de decrementarlo.
+         */
 		iterator& operator--(){
 			--p;
 			return *this;
 		}
-		
+
+        /**
+         * @brief Operador de desreferencia para el iterador, proporcionando acceso a la ruta actual.
+         * @return Referencia a la ruta apuntada por el iterador.
+         */
 		const Pais & operator*()const{
 			return p->second;
 		}
@@ -97,24 +132,56 @@ class Paises{
 	    friend class const_iterator;
 	};    
 
+	/**
+	 * @brief Clase iterator const.
+	 * Itera sobre los paises que componen un tipo de dato "paises"
+	 * Proporciona funcionalidades para iterar, acceder y modificar las rutas en la colección.
+	 */
 	class const_iterator{
 	private:
 	    map<Punto,Pais>::const_iterator p;
 	public:
+        /**
+         * @brief Constructor por defecto para el iterador.
+         */
 		const_iterator(){}
 		
+        /**
+         * @brief Operador de comparación de igualdad para iteradores.
+         * @param i Iterador con el que comparar.
+         * @return Verdadero si los iteradores son iguales, falso en caso contrario.
+         */
 		bool operator == (const const_iterator &i){return p == i.p;}
+
+        /**
+         * @brief Operador de comparación de desigualdad para iteradores.
+         * @param i Iterador con el que comparar.
+         * @return Verdadero si los iteradores no son iguales, falso en caso contrario.
+         */
 		bool operator != (const const_iterator &i){return p != i.p;}
+
+        /**
+         * @brief Operador de incremento prefixado para el iterador.
+         * @return Referencia al iterador después de incrementarlo.
+         */
 		const_iterator & operator++(){
 			++p;
 			return *this;		
 		}
-		
+
+        /**
+         * @brief Operador de decremento prefixado para el iterador.
+         * @return Referencia al iterador después de decrementarlo.
+         */
 		const_iterator & operator--(){
 			--p;
 			return *this;
 		}
 
+        /**
+         * @brief Operador de desreferencia para el iterador, proporcionando acceso a la ruta actual.
+         * @return Referencia a la ruta apuntada por el iterador.
+         */
 		const Pais & operator*()const{
 			return p->second;
 		}

@@ -6,10 +6,11 @@
  * @file Pais.h
  * @brief Cabecera para la clase Pais
  */
-#include "Punto.h"
-
 #ifndef PAIS
 #define PAIS
+
+#include "Punto.h"
+
 
 /**
  * @brief T.D.A Pais
@@ -34,7 +35,10 @@
  *  respectivamente
  * 
  * FUNCION DE ABSTRACCIÓN:
+ * f(Punto, String1, String2) -> Pais llamado [string1] ubicado en [Punto] con bandera [imagen del path string2] 
  * 
+ * INVARIANTE DE REPRESENTACIÓN:
+ * Ir{punto es donde se encuentra el pais con nombre string1, la bandera ubicada en string2 es la que se corresponde con el pais de nombre string1}
  */
 
 class Pais{
@@ -215,9 +219,6 @@ class Pais{
     friend ostream & operator<<(ostream & os, const Pais &P);
 
 };
-
-
-#endif
 
 
 #endif

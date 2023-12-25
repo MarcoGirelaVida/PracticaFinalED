@@ -1,8 +1,0 @@
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/imagen.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/paises.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/pruebarotacion.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/pruebapegado.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/ruta_aerea.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/doc_doxygen.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/edit_cache.dir
-/home/davidpereztobarra/Escritorio/Proyecto_Rutas_Aereas/PracticaFinalED/practicafinal/build/CMakeFiles/rebuild_cache.dir
